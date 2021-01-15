@@ -1,0 +1,25 @@
+.main {
+  min-height: var(--sectionHeight);
+
+  background-color: #ffdfe9;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.greeting {
+  width: 300px;
+
+  background-color: darkgray;
+}
+
+.photo {
+  width: 300px;
+  height: 400px;
+
+  background-color: darkgray;
+}

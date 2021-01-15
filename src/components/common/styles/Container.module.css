@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 50px 3%;
+
+  border: 1px solid var(--dark); /* FIXME needs to delete after finish layouts */
+}

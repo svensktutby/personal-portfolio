@@ -1,0 +1,18 @@
+.titlePrimary,
+.titleSecondary,
+.titleTertiary {
+  margin-top: 0;
+}
+
+.titleSecondary {
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+
+  background-color: #d8d8d8;
+}
+
+.titleTertiary {
+  background-color: #aaa;
+}

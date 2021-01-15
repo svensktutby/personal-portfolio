@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputsWrapper {
+  min-width: 340px;
+  min-height: 200px;
+}
+
+.textTitle,
+.emailTitle,
+.messageTitle {
+  padding-bottom: 10px;
+}
+
+.message {
+  min-height: 50px;
+
+  resize: none;
+}
+
+.submitWrapper {
+  margin-top: auto;
+
+  text-align: center;
+}
+
+.submit {
+  display: inline-block;
+}

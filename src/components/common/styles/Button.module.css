@@ -1,0 +1,48 @@
+.btn {
+  position: relative;
+
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+
+  vertical-align: middle;
+  color: var(--dark);
+  text-decoration: none;
+
+  background-color: #929196;
+  border: 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transform: perspective(1px) translateZ(0);
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  border: 4px solid #929196 ;
+
+  transition-duration: 0.3s;
+  transition-property: top, right, bottom, left;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+@media (hover: hover) {
+  .btn:hover::before,
+  .btn:focus::before,
+  .btn:active::before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+  }
+}

@@ -1,0 +1,29 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+
+  background-color: #ececec;
+  border: 1px solid var(--dark); /* FIXME needs to delete after finish layouts */
+}
+
+.imageWrapper {
+  position: relative;
+
+  min-height: 250px;
+
+  background-color: #c4c4c4;
+}
+
+.imageWrapper .imageLink {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title,
+.description {
+  padding: 10px;
+}

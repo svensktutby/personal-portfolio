@@ -1,0 +1,17 @@
+.contact {
+  min-height: var(--sectionHeight);
+
+  background-color: #fee2e2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

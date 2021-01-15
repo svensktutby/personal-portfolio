@@ -1,0 +1,21 @@
+.nav {
+  border: 1px solid #333;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  text-transform: capitalize;
+
+  list-style-type: none;
+}
+
+.item:not(:first-child) {
+  padding-left: 10px;
+}
+
+.item:not(:last-child) {
+  padding-right: 10px;
+}

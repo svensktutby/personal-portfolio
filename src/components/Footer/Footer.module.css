@@ -1,0 +1,15 @@
+.footer {
+  background-color: #ebffe3;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialWrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

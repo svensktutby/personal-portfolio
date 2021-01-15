@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
 import './App.css';
+import { StoreType } from './bll/store';
+import { Header } from './components/Header';
+import { Main } from './components/Main';
+import { Skills } from './components/Skills';
+import { Projects } from './components/Projects';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
-function App() {
+type AppPropsType = {
+  store: StoreType;
+};
+
+export const App: FC<AppPropsType> = ({ store }) => {
+  const { navLinks, socialList, skills, projects } = store.getState.call(store);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header navLinks={navLinks} />
+      <Main />
+      <Skills skills={skills} />
+      <Projects projects={projects} />
+      <Contact />
+      <Footer socialList={socialList} />
     </div>
   );
-}
-
-export default App;
+};

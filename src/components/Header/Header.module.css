@@ -1,0 +1,32 @@
+.headerWrapper {
+  position: relative;
+}
+
+.headerWrapper::after,
+.header {
+  height: var(--headerHeight);
+}
+
+.headerWrapper::after {
+  content: "";
+
+  display: block;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+
+  background-color: #d0ebfe;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 0;
+  padding-bottom: 0;
+}

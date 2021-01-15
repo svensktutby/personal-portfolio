@@ -1,0 +1,29 @@
+.skills {
+  min-height: var(--sectionHeight);
+
+  background-color: #defeea;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: auto;
+
+  text-align: center;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+
+  list-style-type: none;
+
+  border: 1px solid var(--dark); /* FIXME needs to delete after finish layouts */
+}
