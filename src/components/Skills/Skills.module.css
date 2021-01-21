@@ -15,15 +15,11 @@
   text-align: center;
 }
 
-.skillList {
+.skillCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin: 0;
-  padding-left: 0;
-
-  list-style-type: none;
 
   border: 1px solid var(--dark); /* FIXME needs to delete after finish layouts */
 }

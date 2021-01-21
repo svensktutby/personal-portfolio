@@ -1,11 +1,11 @@
-.InputWrapper {
+.inputWrapper {
   position: relative;
 
   display: block;
   width: 100%;
 }
 
-.Input {
+.input {
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -26,7 +26,7 @@
   transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
 }
 
-.Input:focus {
+.input:focus {
   color: var(--dark);
 
   background-color: #fff;

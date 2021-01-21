@@ -14,7 +14,7 @@ export const Projects: FC<ProjectsPropsType> = ({ projects }) => {
     <section className={s.projects} id="projects">
       <div className={`${styleContainer.container} ${s.container}`}>
         <h2 className={styleTitle.titleSecondary}>My projects</h2>
-        <ul className={s.projectList}>
+        <div className={s.projectCards}>
           {projects.map((project) => (
             <Project
               key={project.id}
@@ -23,7 +23,7 @@ export const Projects: FC<ProjectsPropsType> = ({ projects }) => {
               image={project.image}
             />
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

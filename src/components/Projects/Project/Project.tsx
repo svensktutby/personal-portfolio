@@ -17,7 +17,7 @@ export const Project: FC<ProjectPropsType> = ({
   image,
 }) => {
   return (
-    <li className={s.project}>
+    <div className={s.projectCard}>
       <div className={s.imageWrapper}>
         <img
           className={s.image}
@@ -35,6 +35,6 @@ export const Project: FC<ProjectPropsType> = ({
         <h3 className={`${styleTitle.titleTertiary} ${s.title}`}>{title}</h3>
         <div className={s.description}>{description}</div>
       </div>
-    </li>
+    </div>
   );
 };

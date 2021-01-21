@@ -12,18 +12,18 @@ export const Form: FC = () => {
       }}
     >
       <div className={s.inputsWrapper}>
-        <label className={`${styleInput.InputWrapper} ${s.textTitle}`}>
-          <input className={`${styleInput.Input} ${s.text}`} type="text" />
+        <label className={`${styleInput.inputWrapper} ${s.textTitle}`}>
+          <input className={`${styleInput.input} ${s.text}`} type="text" />
         </label>
-        <label className={`${styleInput.InputWrapper} ${s.emailTitle}`}>
+        <label className={`${styleInput.inputWrapper} ${s.emailTitle}`}>
           <input
-            className={`${styleInput.Input} ${s.email}`}
+            className={`${styleInput.input} ${s.email}`}
             type="email"
             required
           />
         </label>
-        <label className={`${styleInput.InputWrapper} ${s.messageTitle}`}>
-          <textarea className={`${styleInput.Input} ${s.message}`} />
+        <label className={`${styleInput.inputWrapper} ${s.messageTitle}`}>
+          <textarea className={`${styleInput.input} ${s.message}`} />
         </label>
       </div>
       <div className={s.submitWrapper}>
