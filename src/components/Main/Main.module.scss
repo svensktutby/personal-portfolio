@@ -1,6 +1,8 @@
 @import "src/components/common/styles/base/variables";
 
 .main {
+  position: relative;
+
   min-height: 100vh;
 
   background-color: #ffdfe9;
@@ -24,4 +26,11 @@
   height: 400px;
 
   background-color: darkgray;
+}
+
+.mouseWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 5.5%;
+  left: 0;
 }

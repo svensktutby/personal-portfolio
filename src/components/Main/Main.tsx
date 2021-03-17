@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import s from './Main.module.scss';
 import styleContainer from '../common/styles/Container.module.scss';
+import { Mouse } from '../common/Mouse';
 
 export const Main: FC = () => {
   return (
@@ -15,6 +16,9 @@ export const Main: FC = () => {
           <p>Frontend Developer</p>
         </div>
         <div className={s.photo} />
+        <div className={s.mouseWrapper}>
+          <Mouse />
+        </div>
       </div>
     </main>
   );
