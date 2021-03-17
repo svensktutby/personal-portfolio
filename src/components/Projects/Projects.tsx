@@ -2,19 +2,20 @@ import React, { FC } from 'react';
 
 import s from './Projects.module.scss';
 import styleContainer from '../common/styles/Container.module.scss';
-import styleTitle from '../common/styles/Title.module.scss';
-import { ProjectType } from '../../bll/store';
+import { HeadingType, ProjectType } from '../../bll/store';
 import { Project } from './Project';
+import { Heading } from '../common/Heading';
 
-type ProjectsPropsType = {
+type PropsType = {
   projects: Array<ProjectType>;
+  heading: HeadingType;
 };
 
-export const Projects: FC<ProjectsPropsType> = ({ projects }) => {
+export const Projects: FC<PropsType> = ({ projects, heading }) => {
   return (
     <section className={s.projects} id="projects">
       <div className={`${styleContainer.container} ${s.container}`}>
-        <h2 className={styleTitle.titleSecondary}>My projects</h2>
+        <Heading title={heading.title} description={heading.description} />
         <div className={s.projectCards}>
           {projects.map((project) => (
             <Project

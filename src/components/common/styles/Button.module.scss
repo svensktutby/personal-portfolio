@@ -20,23 +20,27 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   cursor: pointer;
 
-  transition: color $transition-time, background-color $transition-time, border-color $transition-time;
+  transition-duration: $transition-time;
+  transition-property: color , background-color, border-color, box-shadow;
 
   user-select: none;
-}
 
-.btn:focus {
-  outline: 0;
-}
-
-@media (hover: hover) {
-  .btn:hover,
-  .btn:focus {
-    background-color: $link-color-hover;
-    border-color: $link-color-hover;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
 
-  .btn:active {
-    color: rgba($white, 0.6);
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      background-color: $link-color-hover;
+      border-color: $link-color-hover;
+    }
+
+    &:active {
+      color: rgba($white, 0.8);
+
+      background-color: darken($link-color-hover, 10%);
+    }
   }
 }

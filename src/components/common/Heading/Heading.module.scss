@@ -1,0 +1,12 @@
+@import "src/components/common/styles/base/variables";
+
+.title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  font-weight: 800;
+  font-size: $font-size-title-secondary;
+  line-height: 1;
+  color: $gray-darkest;
+  letter-spacing: -0.25px;
+}

@@ -6,17 +6,13 @@ import styleTitle from '../../common/styles/Title.module.scss';
 import defaultImage from '../../../assets/images/no-image.svg';
 import { ImageType } from '../../../bll/store';
 
-type ProjectPropsType = {
+type PropsType = {
   title: string;
   description: string;
   image: ImageType;
 };
 
-export const Project: FC<ProjectPropsType> = ({
-  title,
-  description,
-  image,
-}) => {
+export const Project: FC<PropsType> = ({ title, description, image }) => {
   return (
     <div className={s.projectCard}>
       <div className={s.imageWrapper}>

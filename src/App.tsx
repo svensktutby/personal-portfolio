@@ -15,16 +15,22 @@ type AppPropsType = {
 };
 
 export const App: FC<AppPropsType> = ({ store }) => {
-  const { navLinks, socialList, skills, projects } = store.getState.call(store);
+  const {
+    navLinks,
+    socialList,
+    skills,
+    projects,
+    headings,
+  } = store.getState.call(store);
 
   return (
     <div className={s.app}>
       <Header navLinks={navLinks} />
       <Main />
-      <Skills skills={skills} />
-      <Hire />
-      <Projects projects={projects} />
-      <Contact />
+      <Skills skills={skills} heading={headings.skills} />
+      <Hire heading={headings.hire} />
+      <Projects projects={projects} heading={headings.projects} />
+      <Contact heading={headings.contact} />
       <Footer socialList={socialList} />
     </div>
   );

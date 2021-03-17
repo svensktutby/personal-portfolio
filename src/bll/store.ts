@@ -11,6 +11,11 @@ export type ImageType = {
   large: string;
 };
 
+export type HeadingType = {
+  title: string;
+  description: string;
+};
+
 export type SocialType = {
   title: string;
   url: string;
@@ -28,6 +33,7 @@ export type RootStateType = {
   skills: Array<SkillType>;
   projects: Array<ProjectType>;
   socialList: Array<SocialType>;
+  headings: Record<string, HeadingType>;
 };
 
 export type StoreType = {
@@ -98,6 +104,29 @@ export const store: StoreType = {
         },
       },
     ],
+    headings: {
+      about: {
+        title: 'About me',
+        description: 'Get to know me',
+      },
+      skills: {
+        title: 'My skills',
+        description: 'The knowledge I have acquired',
+      },
+      hire: {
+        title: "Let's work together!",
+        description:
+          'I am available for freelance projects. Hire me and get your project done.',
+      },
+      projects: {
+        title: 'My projects',
+        description: 'Showcasing some of my best work',
+      },
+      contact: {
+        title: 'Get in Touch',
+        description: 'Feel free to contact me anytime',
+      },
+    },
   },
   getState() {
     return this._state;

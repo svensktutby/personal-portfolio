@@ -1,10 +1,13 @@
 @import "src/components/common/styles/base/variables";
+// TODO probably needs to remove this file
 
 .titlePrimary,
 .titleSecondary,
 .titleTertiary,
 .titleQuaternary {
   margin-top: 0;
+
+  font-weight: 700;
   color: $gray-darkest;
 }
 
@@ -13,11 +16,17 @@
 }
 
 .titleSecondary {
+  margin-bottom: 1rem;
+
+  font-weight: 800;
   font-size: $font-size-title-secondary;
+  line-height: 1;
+  letter-spacing: -0.25px;
 }
 
 .titleTertiary {
   font-size: $font-size-title-tertiary;
+  letter-spacing: 0.1px;
 }
 
 .titleQuaternary {

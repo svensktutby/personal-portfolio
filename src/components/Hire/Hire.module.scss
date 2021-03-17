@@ -2,20 +2,22 @@
 
 .hire {
   background-color: $theme-color-dark;
+
+  h2 {
+    margin-bottom: 14px;
+
+    font-weight: 700;
+    color: $white;
+    letter-spacing: initial;
+  }
+
+  p {
+    color: $text-color-muted;
+  }
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.hire .title {
-  margin-bottom: 14px;
-
-  color: $white;
-}
-
-.text {
-  color: $text-color-muted;
 }

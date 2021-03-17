@@ -5,19 +5,19 @@
   text-decoration: none;
 
   transition: color $transition-time;
-}
 
-.link:focus {
-  outline: 0;
-}
-
-@media (hover: hover) {
-  .link:hover,
-  .link:focus {
-    color: $link-color-hover;
+  &:focus {
+    outline: 0;
   }
 
-  .link:active {
-    color: $text-color-muted;
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: $link-color-hover;
+    }
+
+    &:active {
+      color: $text-color-muted;
+    }
   }
 }

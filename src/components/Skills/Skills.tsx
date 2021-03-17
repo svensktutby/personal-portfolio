@@ -2,19 +2,20 @@ import React, { FC } from 'react';
 
 import s from './Skills.module.scss';
 import styleContainer from '../common/styles/Container.module.scss';
-import styleTitle from '../common/styles/Title.module.scss';
-import { SkillType } from '../../bll/store';
+import { HeadingType, SkillType } from '../../bll/store';
 import { Skill } from './Skill';
+import { Heading } from '../common/Heading';
 
-type SkillsPropsType = {
+type PropsType = {
   skills: Array<SkillType>;
+  heading: HeadingType;
 };
 
-export const Skills: FC<SkillsPropsType> = ({ skills }) => {
+export const Skills: FC<PropsType> = ({ skills, heading }) => {
   return (
     <section className={s.skills} id="skills">
       <div className={`${styleContainer.container} ${s.container}`}>
-        <h2 className={styleTitle.titleSecondary}>Skills</h2>
+        <Heading title={heading.title} description={heading.description} />
         <div className={s.skillCards}>
           {skills.map((skill) => (
             <Skill
