@@ -1,5 +1,5 @@
 .skills {
-  min-height: var(--sectionHeight);
+  min-height: 100vh;
 
   background-color: #defeea;
 }
@@ -20,6 +20,4 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-
-  border: 1px solid var(--dark); /* FIXME needs to delete after finish layouts */
 }

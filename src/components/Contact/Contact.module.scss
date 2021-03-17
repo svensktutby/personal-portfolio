@@ -1,5 +1,7 @@
+@import "src/components/common/styles/base/variables";
+
 .contact {
-  min-height: var(--sectionHeight);
+  min-height: 100vh;
 
   background-color: #fee2e2;
 }

@@ -20,6 +20,7 @@ $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
 
 $sunglo:                      #e16f7c;
+$brick-red:                   #d43042;
 $royal-blue:                  #4770d9;
 $eastern-blue:                #17a2b8;
 
@@ -28,15 +29,19 @@ $cloudy-knoxville-gradient:   linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 /* Semantic colors
 ******************************/
 $theme-color:                 $sunglo;
+$theme-color-dark:            $gray-darkest;
+
 $text-color:                  $gray-darker;
 $text-color-muted:            $gray;
+
 $body-bg:                     $white;
 $body-gradient:               $cloudy-knoxville-gradient;
+
 $section-color-main:          $white;
 $section-color-additional:    $white-muted;
 
 $link-color:                  $theme-color;
-$link-color--hover:           darken($color-main, 15%);
+$link-color--hover:           $brick-red;
 
 $border-color:                $gray-lighter;
 
@@ -56,7 +61,7 @@ $line-height-text:            1.95;
 /* Sizes
 ******************************/
 $screen-xs:                   375px;
-$screen-sm:                   480px;
+$screen-sm:                   576px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1200px;
@@ -95,3 +100,5 @@ $z-index-modal:               100;
 
 $retina-dpi:                  144dpi;
 $retina-dppx:                 1.5dppx;
+
+$header-height: 80px;

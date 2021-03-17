@@ -1,5 +1,7 @@
+@import "src/components/common/styles/base/variables";
+
 .main {
-  min-height: var(--sectionHeight);
+  min-height: 100vh;
 
   background-color: #ffdfe9;
 }

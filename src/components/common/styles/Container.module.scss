@@ -1,10 +1,10 @@
+@import "src/components/common/styles/base/variables";
+
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: $screen-xl;
   height: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 50px 3%;
-
-  border: 1px solid var(--dark); /* FIXME needs to delete after finish layouts */
 }

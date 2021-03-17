@@ -1,5 +1,32 @@
+@import "src/components/common/styles/base/variables";
+
 .nav {
-  border: 1px solid #333;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+
+  height: $header-height;
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: $header-height;
+
+  background-color: #222;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .list {
@@ -7,9 +34,9 @@
   flex-wrap: wrap;
   margin: 0;
   padding-left: 0;
-  text-transform: capitalize;
 
   list-style-type: none;
+  text-transform: capitalize;
 }
 
 .item:not(:first-child) {
@@ -18,4 +45,21 @@
 
 .item:not(:last-child) {
   padding-right: 10px;
+}
+
+.nav .link {
+  position: relative;
+
+  color: rgba($white, 0.6);
+}
+
+@media (hover: hover) {
+  .nav .link:hover,
+  .nav .link:focus {
+    color: $white;
+  }
+
+  .nav .link:active {
+    color: $gray-dark;
+  }
 }
