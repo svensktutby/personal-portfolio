@@ -8,6 +8,7 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { Hire } from './components/Hire';
 
 type AppPropsType = {
   store: StoreType;
@@ -21,6 +22,7 @@ export const App: FC<AppPropsType> = ({ store }) => {
       <Header navLinks={navLinks} />
       <Main />
       <Skills skills={skills} />
+      <Hire />
       <Projects projects={projects} />
       <Contact />
       <Footer socialList={socialList} />

@@ -2,19 +2,24 @@
 
 .titlePrimary,
 .titleSecondary,
-.titleTertiary {
+.titleTertiary,
+.titleQuaternary {
   margin-top: 0;
+  color: $gray-darkest;
+}
+
+.titlePrimary {
+  font-size: $font-size-title-primary;
 }
 
 .titleSecondary {
-  margin-right: auto;
-  margin-left: auto;
-
-  text-align: center;
-
-  background-color: #d8d8d8;
+  font-size: $font-size-title-secondary;
 }
 
 .titleTertiary {
-  background-color: #aaa;
+  font-size: $font-size-title-tertiary;
+}
+
+.titleQuaternary {
+  font-size: $font-size-title-quaternary;
 }
