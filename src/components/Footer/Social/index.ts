@@ -1,3 +1,1 @@
-import { Social } from './Social';
-
-export { Social };
+export * from './Social';

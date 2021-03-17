@@ -1,3 +1,1 @@
-import { Projects } from './Projects';
-
-export { Projects };
+export * from './Projects';

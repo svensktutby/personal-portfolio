@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import s from './Form.module.css';
-import styleBtn from '../../common/styles/Button.module.css';
-import styleInput from '../../common/styles/Input.module.css';
+
+import s from './Form.module.scss';
+import styleBtn from '../../common/styles/Button.module.scss';
+import styleInput from '../../common/styles/Input.module.scss';
 
 export const Form: FC = () => {
   return (

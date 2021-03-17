@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import s from './Projects.module.css';
-import styleContainer from '../common/styles/Container.module.css';
-import styleTitle from '../common/styles/Title.module.css';
+
+import s from './Projects.module.scss';
+import styleContainer from '../common/styles/Container.module.scss';
+import styleTitle from '../common/styles/Title.module.scss';
 import { ProjectType } from '../../bll/store';
 import { Project } from './Project';
 

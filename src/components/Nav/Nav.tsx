@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import s from './Nav.module.css';
-import styleLink from '../common/styles/Link.module.css';
 import { v1 } from 'uuid';
+
+import s from './Nav.module.scss';
+import styleLink from '../common/styles/Link.module.scss';
 
 type HavPropsType = {
   navLinks: Array<string>;

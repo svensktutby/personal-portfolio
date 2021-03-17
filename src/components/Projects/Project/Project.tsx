@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
-import s from './Project.module.css';
-import { ImageType } from '../../../bll/store';
+
+import s from './Project.module.scss';
+import styleBtn from '../../common/styles/Button.module.scss';
+import styleTitle from '../../common/styles/Title.module.scss';
 import defaultImage from '../../../assets/images/no-image.svg';
-import styleBtn from '../../common/styles/Button.module.css';
-import styleTitle from '../../common/styles/Title.module.css';
+import { ImageType } from '../../../bll/store';
 
 type ProjectPropsType = {
   title: string;

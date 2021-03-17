@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import s from './Contact.module.css';
-import styleContainer from '../common/styles/Container.module.css';
-import styleTitle from '../common/styles/Title.module.css';
+
+import s from './Contact.module.scss';
+import styleContainer from '../common/styles/Container.module.scss';
+import styleTitle from '../common/styles/Title.module.scss';
 import { Form } from './Form';
 
 export const Contact: FC = () => {

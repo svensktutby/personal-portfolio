@@ -1,3 +1,1 @@
-import { Skill } from './Skill';
-
-export { Skill };
+export * from './Skill';

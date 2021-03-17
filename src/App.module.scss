@@ -1,0 +1,13 @@
+@import "src/components/common/styles/base/variables";
+
+.app {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family;
+}
+
+::selection {
+  color: $white;
+
+  background-color: $theme-color;
+}

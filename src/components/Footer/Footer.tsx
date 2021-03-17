@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import s from './Footer.module.css';
-import styleContainer from '../common/styles/Container.module.css';
+
+import s from './Footer.module.scss';
+import styleContainer from '../common/styles/Container.module.scss';
 import { Social } from './Social';
 import { SocialType } from '../../bll/store';
 

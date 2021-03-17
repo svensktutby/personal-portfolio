@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import s from './Social.module.css';
-import styleLink from '../../common/styles/Link.module.css';
-import { SocialType } from '../../../bll/store';
 import { v1 } from 'uuid';
+
+import s from './Social.module.scss';
+import styleLink from '../../common/styles/Link.module.scss';
+import { SocialType } from '../../../bll/store';
 
 type SocialPropsType = {
   socialList: Array<SocialType>;

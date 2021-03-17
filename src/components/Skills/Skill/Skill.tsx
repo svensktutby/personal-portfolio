@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import s from './Skill.module.css';
-import styleTitle from '../../common/styles/Title.module.css';
+
+import s from './Skill.module.scss';
+import styleTitle from '../../common/styles/Title.module.scss';
 
 type SkillPropsType = {
   title: string;

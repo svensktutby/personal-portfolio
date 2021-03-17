@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import './App.css';
+
+import s from './App.module.scss';
 import { StoreType } from './bll/store';
 import { Header } from './components/Header';
 import { Main } from './components/Main';
@@ -16,7 +17,7 @@ export const App: FC<AppPropsType> = ({ store }) => {
   const { navLinks, socialList, skills, projects } = store.getState.call(store);
 
   return (
-    <div className="App">
+    <div className={s.app}>
       <Header navLinks={navLinks} />
       <Main />
       <Skills skills={skills} />

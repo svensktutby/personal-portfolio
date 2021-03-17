@@ -1,3 +1,1 @@
-import { Contact } from './Contact';
-
-export { Contact };
+export * from './Contact';
