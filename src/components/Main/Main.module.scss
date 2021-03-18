@@ -3,34 +3,77 @@
 .main {
   position: relative;
 
-  min-height: 100vh;
+  height: 100vh;
 
-  background-color: #ffdfe9;
+  background-color: $body-bg;
+  background-image: url("../../assets/images/bg-main.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.68);
+  }
 }
 
 .container {
   display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .greeting {
   width: 300px;
 
-  background-color: darkgray;
+  background-color: $body-bg;
 }
 
 .photo {
-  width: 300px;
-  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 400px;
+  padding: 0.25rem;
 
-  background-color: darkgray;
+  background-color: transparent;
+  border: 1px solid $gray;
+  border-radius: 0.25rem;
+}
+
+.image {
+  background-color: $body-bg;
 }
 
 .mouseWrapper {
   position: absolute;
+  z-index: 2;
   right: 0;
   bottom: 5.5%;
   left: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  display: inline-block;
 }

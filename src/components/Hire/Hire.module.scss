@@ -1,7 +1,25 @@
 @import "src/components/common/styles/base/variables";
 
 .hire {
-  background-color: $theme-color-dark;
+  position: relative;
+  background-color: $body-bg;
+  background-image: url("../../assets/images/bg-hire.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,0.83);
+  }
 
   h2 {
     margin-bottom: 14px;
@@ -17,7 +35,16 @@
 }
 
 .container {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
