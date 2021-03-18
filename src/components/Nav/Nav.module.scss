@@ -24,7 +24,6 @@
 .nav .container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -47,19 +46,6 @@
   padding-right: 10px;
 }
 
-.nav .link {
+.link {
   position: relative;
-
-  color: rgba($white, 0.6);
-}
-
-@media (hover: hover) {
-  .nav .link:hover,
-  .nav .link:focus {
-    color: $white;
-  }
-
-  .nav .link:active {
-    color: $gray-dark;
-  }
 }

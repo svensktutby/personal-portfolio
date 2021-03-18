@@ -45,10 +45,10 @@ export const SvgIcon: FC<SvgIconType> = ({ type }) => {
         </svg>
       );
 
-    case 'javascript':
+    case 'JavaScript':
       return (
         <svg
-          height="48"
+          height="42"
           width="48"
           viewBox="0 0 512 512"
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ export const SvgIcon: FC<SvgIconType> = ({ type }) => {
         </svg>
       );
 
-    case 'typescript':
+    case 'TypeScript':
       return (
         <svg
           height="42"
@@ -69,7 +69,7 @@ export const SvgIcon: FC<SvgIconType> = ({ type }) => {
         </svg>
       );
 
-    case 'react':
+    case 'React':
       return (
         <svg
           height="42"
@@ -81,7 +81,7 @@ export const SvgIcon: FC<SvgIconType> = ({ type }) => {
         </svg>
       );
 
-    case 'redux':
+    case 'Redux':
       return (
         <svg
           height="42"
@@ -93,7 +93,7 @@ export const SvgIcon: FC<SvgIconType> = ({ type }) => {
         </svg>
       );
 
-    case 'html5':
+    case 'HTML5':
       return (
         <svg
           height="42"
@@ -105,7 +105,7 @@ export const SvgIcon: FC<SvgIconType> = ({ type }) => {
         </svg>
       );
 
-    case 'css3':
+    case 'CSS3':
       return (
         <svg
           height="42"

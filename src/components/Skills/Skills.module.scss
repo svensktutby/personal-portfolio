@@ -1,8 +1,6 @@
 @import "src/components/common/styles/base/variables";
 
-skills {
-  min-height: 100vh;
-
+.skills {
   background-color: $section-color-additional;
 }
 
@@ -16,4 +14,12 @@ skills {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+
+  & > div {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
 }

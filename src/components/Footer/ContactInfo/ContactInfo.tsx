@@ -16,14 +16,14 @@ export const ContactInfo: FC<PropsType> = ({ personalInfo }) => {
         const [key, value] = pi;
 
         return (
-          <div key={key} className={s.singleInfo}>
-            <div className={s.iconWrapper}>
+          <div key={key} className={s.info}>
+            <div className={s.icon}>
               <SvgIcon type={key} />
             </div>
 
             <p className={s.infoContent}>
               <a
-                className={`${styleLink.link} ${s.infoLink}`}
+                className={styleLink.link}
                 href={value.url}
                 target="_blank"
                 rel="noreferrer noopener"

@@ -11,15 +11,14 @@
   border-bottom: 2px solid rgba(85,85,85,0.2);
 }
 
+.icon {
+  margin-bottom: 16px;
 
-
-.iconWrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  text-align: center;
 
   svg {
     width: 44px;
+
     fill: $theme-color;
   }
 }
@@ -27,19 +26,4 @@
 .infoContent {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.infoLink {
-  color: $white;
-
-  @media (hover: hover) {
-    &:hover,
-    &:focus {
-      color: $link-color;
-    }
-
-    &:active {
-      color: $text-color-muted;
-    }
-  }
 }

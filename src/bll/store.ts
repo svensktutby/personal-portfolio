@@ -77,19 +77,37 @@ export const store: StoreType = {
     skills: [
       {
         id: v1(),
-        title: 'JS',
+        title: 'React',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur inventore ipsam iusto nisi quasi quisquam, repellendus sapiente sint suscipit vel voluptas.',
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur inventore ipsam iusto nisi quasi quisquam, repellendus sapiente sint suscipit vel.',
       },
       {
         id: v1(),
-        title: 'React',
+        title: 'Redux',
         description:
           'Ab accusamus aperiam beatae dolores iusto, laborum magni maiores molestiae nesciunt quaerat repellendus saepe tempora ullam?',
       },
       {
         id: v1(),
-        title: 'Redux',
+        title: 'TypeScript',
+        description:
+          'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
+      },
+      {
+        id: v1(),
+        title: 'JavaScript',
+        description:
+          'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
+      },
+      {
+        id: v1(),
+        title: 'HTML5',
+        description:
+          'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
+      },
+      {
+        id: v1(),
+        title: 'CSS3',
         description:
           'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
       },

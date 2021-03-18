@@ -16,7 +16,8 @@ export const Hire: FC<PropsType> = ({ heading }) => {
       <div className={`${styleContainer.container} ${s.container}`}>
         <div className={s.content}>
           <Heading title={heading.title} description={heading.description} />
-          <a className={`${styleBtn.btn}`} href="#contact">
+
+          <a className={styleBtn.btn} href="#contact" role="button">
             Hire me
           </a>
         </div>

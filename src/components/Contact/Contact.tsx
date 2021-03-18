@@ -15,9 +15,8 @@ export const Contact: FC<PropsType> = ({ heading }) => {
     <section className={s.contact} id="contact">
       <div className={`${styleContainer.container} ${s.container}`}>
         <Heading title={heading.title} description={heading.description} />
-        <div className={s.formWrapper}>
-          <Form />
-        </div>
+
+        <Form />
       </div>
     </section>
   );

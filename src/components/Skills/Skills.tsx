@@ -16,6 +16,7 @@ export const Skills: FC<PropsType> = ({ skills, heading }) => {
     <section className={s.skills} id="skills">
       <div className={`${styleContainer.container} ${s.container}`}>
         <Heading title={heading.title} description={heading.description} />
+
         <div className={s.skillCards}>
           {skills.map((skill) => (
             <Skill

@@ -1,5 +1,9 @@
 @import "src/components/common/styles/base/variables";
 
+.heading {
+  margin-bottom: 3rem;
+}
+
 .title {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -9,4 +13,9 @@
   line-height: 1;
   color: $gray-darkest;
   letter-spacing: -0.25px;
+}
+
+.description {
+  margin-top: 0;
+  margin-bottom: 0;
 }

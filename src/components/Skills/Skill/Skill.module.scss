@@ -1,26 +1,40 @@
+@import "src/components/common/styles/base/variables";
+
 .skillCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
-  padding-top: 20px;
+  padding: 38px 24px;
 
   text-align: center;
 
-  background-color: #f7f7f7;
+  background-color: $white;
+  border: 1px solid rgba($border-color, 0.8);
+
+  transition: box-shadow, $transition-time;
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: $shadow;
+    }
+  }
 }
 
 .icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
-  background-color: #c4c4c4;
-  transform: rotate(45deg);
+  svg {
+    width: 44px;
+
+    fill: $theme-color;
+  }
 }
 
 .description {
-  padding: 10px;
   width: 100%;
   min-height: 200px;
+  padding: 10px;
+
+  font-size: 0.875rem;
+  line-height: 1.95;
 }

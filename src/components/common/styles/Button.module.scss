@@ -17,7 +17,6 @@
   background-color: $theme-color;
   border: 1px solid $theme-color;
   border-radius: 30px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   cursor: pointer;
 
   transition-duration: $transition-time;
@@ -33,14 +32,14 @@
   @media (hover: hover) {
     &:hover,
     &:focus {
-      background-color: $link-color-hover;
-      border-color: $link-color-hover;
+      background-color: darken($theme-color, 10%);
+      border-color: darken($theme-color, 10%);
     }
 
     &:active {
       color: rgba($white, 0.8);
 
-      background-color: darken($link-color-hover, 10%);
+      background-color: darken($theme-color, 15%);
     }
   }
 }
