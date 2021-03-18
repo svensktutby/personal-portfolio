@@ -11,21 +11,22 @@
   border-bottom: 2px solid rgba(85,85,85,0.2);
 }
 
+
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  svg {
+    width: 44px;
+    fill: $theme-color;
+  }
+}
+
 .infoContent {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.singleInfo {
-}
-
-.address {
-}
-
-.phone {
-}
-
-.email {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .infoLink {

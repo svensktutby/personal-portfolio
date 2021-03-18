@@ -32,7 +32,7 @@ $theme-color:                 $sunglo;
 $theme-color-dark:            $gray-darkest;
 
 $text-color:                  $gray-darker;
-$text-color-muted:            $gray;
+$text-color-muted:            $gray-light;
 
 $body-bg:                     $white;
 $body-gradient:               $cloudy-knoxville-gradient;
@@ -93,6 +93,7 @@ $border-radius:               3px;
 $opacity:                     0.7;
 $transition-time:             0.3s;
 $shadow:                      0 25px 45px rgba(0, 0, 0, 0.15);
+$overlay:                     rgba(0, 0, 0, 0.7);
 
 $menu-desktop-width:          $screen-lg;
 

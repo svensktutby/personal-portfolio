@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { v1 } from 'uuid';
 
 import s from './ContactInfo.module.scss';
 import styleLink from '../../common/styles/Link.module.scss';
 import { PersoanlInfoType } from '../../../bll/store';
+import { SvgIcon } from '../../common/SvgIcon';
 
 type PropsType = {
   personalInfo: PersoanlInfoType;
@@ -16,7 +16,11 @@ export const ContactInfo: FC<PropsType> = ({ personalInfo }) => {
         const [key, value] = pi;
 
         return (
-          <div key={v1()} className={`${s.singleInfo} ${s[key]}`}>
+          <div key={key} className={s.singleInfo}>
+            <div className={s.iconWrapper}>
+              <SvgIcon type={key} />
+            </div>
+
             <p className={s.infoContent}>
               <a
                 className={`${styleLink.link} ${s.infoLink}`}
