@@ -63,7 +63,7 @@ export const store: StoreType = {
       },
       {
         title: 'linkedin',
-        url: 'https://www.linkedin.com/',
+        url: 'https://www.linkedin.com/in/svensktutby',
       },
       {
         title: 'twitter',
@@ -71,7 +71,7 @@ export const store: StoreType = {
       },
       {
         title: 'telegram',
-        url: 'https://web.telegram.org/svensktutby',
+        url: 'https://t.me/svensktutby',
       },
     ],
     skills: [

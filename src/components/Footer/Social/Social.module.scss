@@ -1,3 +1,16 @@
+@import "src/components/common/styles/base/variables";
+@import "src/components/common/styles/base/mixins";
+$social-colors: (
+  "fb": #4267b2,
+  "tw": #40a2f5,
+  "gh": #24292e,
+  "li": #0a66c2,
+  "tg": #5682a3,
+  "in": #c33cbe,
+  "vk": #4a76a8,
+  "ok": #e27d23,
+);
+
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -8,25 +21,131 @@
 }
 
 .item:not(:first-child) {
-  padding-left: 10px;
+  margin-left: 6px;
 }
 
 .item:not(:last-child) {
-  padding-right: 10px;
+  margin-right: 6px;
+}
+
+.link {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+
+  background-color: transparent;
+  border: 1px solid $theme-color;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $theme-color;
+
+    transition: top $transition-time;
+  }
+
+  svg {
+    position: relative;
+    z-index: 3;
+
+    height: 14px;
+
+    fill: $theme-color;
+
+    transition: fill 0.5s, transform 0.5s;
+  }
 }
 
 .github {
-
+  .link::before {
+    background-color: map-get($social-colors, "gh");
+  }
 }
 
 .linkedin {
-
+  .link::before {
+    background-color: map-get($social-colors, "li");
+  }
 }
 
 .twitter {
-
+  .link::before {
+    background-color: map-get($social-colors, "tw");
+  }
 }
 
 .telegram {
+  .link::before {
+    background-color: map-get($social-colors, "tg");
+  }
+}
 
+@media (hover: hover) {
+  .link:hover,
+  .link:focus {
+    outline: none;
+
+    transition: border-color 0s 0.3s, background-color 0s 0.3s;
+  }
+
+  .github {
+    .link:hover,
+    .link:focus {
+      background-color: map-get($social-colors, "gh");
+      border-color: map-get($social-colors, "gh");
+    }
+  }
+
+  .linkedin {
+    .link:hover,
+    .link:focus {
+      background-color: map-get($social-colors, "li");
+      border-color: map-get($social-colors, "li");
+    }
+  }
+
+  .twitter {
+    .link:hover,
+    .link:focus {
+      background-color: map-get($social-colors, "tw");
+      border-color: map-get($social-colors, "tw");
+    }
+  }
+
+  .telegram {
+    .link:hover,
+    .link:focus {
+      background-color: map-get($social-colors, "tg");
+      border-color: map-get($social-colors, "tg");
+    }
+  }
+
+  .link:hover::before,
+  .link:focus::before {
+    top: 0;
+  }
+
+  .link:hover svg,
+  .link:focus svg {
+    fill: $gray-lightest;
+    transform: rotateY(360deg);
+  }
+}
+
+.text {
+  @include visually-hidden;
 }

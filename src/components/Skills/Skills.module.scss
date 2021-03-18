@@ -12,14 +12,14 @@
 .skillCards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+  margin-right: -$container-indent-lg;
+  margin-left: -$container-indent-lg;
 
   & > div {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-bottom: 30px;
+    margin-bottom: $grid-gutter-width;
+    padding-right: $container-indent-lg;
+    padding-left: $container-indent-lg;
   }
 }
