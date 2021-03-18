@@ -5,11 +5,11 @@ import s from './Social.module.scss';
 import styleLink from '../../common/styles/Link.module.scss';
 import { SocialType } from '../../../bll/store';
 
-type SocialPropsType = {
+type PropsType = {
   socialList: Array<SocialType>;
 };
 
-export const Social: FC<SocialPropsType> = ({ socialList }) => {
+export const Social: FC<PropsType> = ({ socialList }) => {
   return (
     <div className={s.social}>
       <ul className={s.list}>

@@ -1,15 +1,21 @@
+@import "src/components/common/styles/base/variables";
+
 .footer {
-  background-color: #ebffe3;
+  color: $white;
+
+  background-color: $theme-color-dark;
 }
 
-.footer .container {
+.container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footerMini {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-}
-
-.socialWrapper {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

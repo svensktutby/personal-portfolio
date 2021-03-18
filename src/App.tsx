@@ -18,6 +18,7 @@ export const App: FC<AppPropsType> = ({ store }) => {
   const {
     navLinks,
     socialList,
+    personalInfo,
     skills,
     projects,
     headings,
@@ -31,7 +32,7 @@ export const App: FC<AppPropsType> = ({ store }) => {
       <Hire heading={headings.hire} />
       <Projects projects={projects} heading={headings.projects} />
       <Contact heading={headings.contact} />
-      <Footer socialList={socialList} />
+      <Footer socialList={socialList} personalInfo={personalInfo} />
     </div>
   );
 };

@@ -1,7 +1,9 @@
-.skills {
+@import "src/components/common/styles/base/variables";
+
+skills {
   min-height: 100vh;
 
-  background-color: #defeea;
+  background-color: $section-color-additional;
 }
 
 .container {

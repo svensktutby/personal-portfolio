@@ -1,9 +1,7 @@
 @import "src/components/common/styles/base/variables";
 
 .contact {
-  min-height: 100vh;
-
-  background-color: #fee2e2;
+  background-color: $section-color-additional;
 }
 
 .container {

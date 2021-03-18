@@ -21,6 +21,17 @@ export type SocialType = {
   url: string;
 };
 
+export type PersoanlInfoItemType = {
+  title: string;
+  url: string;
+};
+
+export type PersoanlInfoType = {
+  address: PersoanlInfoItemType;
+  phone: PersoanlInfoItemType;
+  email: PersoanlInfoItemType;
+};
+
 export type ProjectType = {
   id: string;
   title: string;
@@ -34,6 +45,7 @@ export type RootStateType = {
   projects: Array<ProjectType>;
   socialList: Array<SocialType>;
   headings: Record<string, HeadingType>;
+  personalInfo: PersoanlInfoType;
 };
 
 export type StoreType = {
@@ -125,6 +137,20 @@ export const store: StoreType = {
       contact: {
         title: 'Get in Touch',
         description: 'Feel free to contact me anytime',
+      },
+    },
+    personalInfo: {
+      address: {
+        title: 'Minsk, Belarus',
+        url: 'https://goo.gl/maps/6X2q42Z2v4MF5sbg8',
+      },
+      phone: {
+        title: '+375 (29) 763-35-15',
+        url: 'tel:+375297633515',
+      },
+      email: {
+        title: 'svensk.tut.by@gmail.com',
+        url: 'mailto:svensk.tut.by@gmail.com',
       },
     },
   },

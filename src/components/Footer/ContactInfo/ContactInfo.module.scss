@@ -1,0 +1,44 @@
+@import "src/components/common/styles/base/variables";
+
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  border-bottom: 2px solid rgba(85,85,85,0.2);
+}
+
+.infoContent {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.singleInfo {
+}
+
+.address {
+}
+
+.phone {
+}
+
+.email {
+}
+
+.infoLink {
+  color: $white;
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+
+    &:active {
+      color: $text-color-muted;
+    }
+  }
+}
