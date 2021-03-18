@@ -3,19 +3,34 @@
   flex-direction: column;
 }
 
-.inputsWrapper {
-  min-width: 340px;
-  min-height: 200px;
+.formInner {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.textTitle,
+.nameTitle,
 .emailTitle,
+.subjectTitle,
 .messageTitle {
-  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.nameTitle,
+.emailTitle {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.nameTitle {
+  padding-right: 15px;
+}
+
+.emailTitle {
+  padding-left: 15px;
 }
 
 .message {
-  min-height: 50px;
+  min-height: 120px;
 
   resize: none;
 }

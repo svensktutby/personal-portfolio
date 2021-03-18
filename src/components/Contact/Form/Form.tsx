@@ -12,25 +12,42 @@ export const Form: FC = () => {
         e.preventDefault();
       }}
     >
-      <div className={s.inputsWrapper}>
-        <label className={`${styleInput.inputWrapper} ${s.textTitle}`}>
-          <input className={`${styleInput.input} ${s.text}`} type="text" />
+      <div className={s.formInner}>
+        <label className={`${styleInput.inputWrapper} ${s.nameTitle}`}>
+          <input
+            className={`${styleInput.input} ${s.name}`}
+            type="text"
+            placeholder="Name"
+            required
+          />
         </label>
         <label className={`${styleInput.inputWrapper} ${s.emailTitle}`}>
           <input
             className={`${styleInput.input} ${s.email}`}
             type="email"
+            placeholder="Email"
             required
           />
         </label>
-        <label className={`${styleInput.inputWrapper} ${s.messageTitle}`}>
-          <textarea className={`${styleInput.input} ${s.message}`} />
+        <label className={`${styleInput.inputWrapper} ${s.subjectTitle}`}>
+          <input
+            className={`${styleInput.input} ${s.subject}`}
+            type="text"
+            placeholder="Subject"
+          />
         </label>
-      </div>
-      <div className={s.submitWrapper}>
-        <button className={`${styleBtn.btn} ${s.submit}`} type="submit">
-          Send
-        </button>
+        <label className={`${styleInput.inputWrapper} ${s.messageTitle}`}>
+          <textarea
+            className={`${styleInput.input} ${s.message}`}
+            placeholder="Message"
+            required
+          />
+        </label>
+        <div className={s.submitWrapper}>
+          <button className={`${styleBtn.btn} ${s.submit}`} type="submit">
+            Send message
+          </button>
+        </div>
       </div>
     </form>
   );
