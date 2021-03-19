@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import s from './Skill.module.scss';
 import styleTitle from '../../common/styles/Title.module.scss';
+import styleCard from '../../common/styles/Card.module.scss';
 import { SvgIcon } from '../../common/SvgIcon';
 
 type PropsType = {
@@ -12,7 +13,7 @@ type PropsType = {
 export const Skill: FC<PropsType> = ({ title, list }) => {
   return (
     <div>
-      <div className={s.skillCard}>
+      <div className={`${styleCard.card} ${s.skillCard}`}>
         <div className={s.icon}>
           <SvgIcon type={title} />
         </div>

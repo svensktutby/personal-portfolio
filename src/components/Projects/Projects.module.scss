@@ -12,6 +12,15 @@
 .projectCards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+  margin-right: -$container-indent-lg;
+  margin-left: -$container-indent-lg;
+  padding-top: 20px;
+
+  & > div {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    margin-bottom: $grid-gutter-width;
+    padding-right: $container-indent-lg;
+    padding-left: $container-indent-lg;
+  }
 }

@@ -6,11 +6,6 @@ export type SkillType = {
   list: Array<string>;
 };
 
-export type ImageType = {
-  small: string;
-  large: string;
-};
-
 export type HeadingType = {
   title: string;
   description: string;
@@ -22,31 +17,39 @@ export type SocialType = {
   url: string;
 };
 
-export type PersoanlInfoItemType = {
+export type PersonalInfoItemType = {
   title: string;
   url: string;
 };
 
-export type PersoanlInfoType = {
-  address: PersoanlInfoItemType;
-  phone: PersoanlInfoItemType;
-  email: PersoanlInfoItemType;
+export type PersonalInfoType = {
+  address: PersonalInfoItemType;
+  phone: PersonalInfoItemType;
+  email: PersonalInfoItemType;
+};
+
+export type LinkType = {
+  demo: string;
+  github: string;
 };
 
 export type ProjectType = {
   id: string;
+  appType: 'mobileApp' | 'webSite' | 'landingPage';
   title: string;
   description: string;
-  image: ImageType;
+  image: string;
+  link: LinkType;
 };
 
 export type RootStateType = {
   navLinks: Array<string>;
+  filters: Array<string>;
   skills: Array<SkillType>;
   projects: Array<ProjectType>;
   socialList: Array<SocialType>;
   headings: Record<string, HeadingType>;
-  personalInfo: PersoanlInfoType;
+  personalInfo: PersonalInfoType;
 };
 
 export type StoreType = {
@@ -57,6 +60,7 @@ export type StoreType = {
 export const store: StoreType = {
   _state: {
     navLinks: ['home', 'skills', 'projects', 'contact'],
+    filters: ['mobileApp', 'webSite', 'landingPage'],
     socialList: [
       {
         id: randomId(),
@@ -99,8 +103,8 @@ export const store: StoreType = {
         id: randomId(),
         title: 'Redux',
         list: [
-          'Flux',
           'Redux ducks',
+          'Flux Standard Action',
           'Middleware',
           'Thunk',
           'Saga',
@@ -130,12 +134,12 @@ export const store: StoreType = {
         id: randomId(),
         title: 'HTML5',
         list: [
-          'W3C, WHATWG',
           'Semantic',
+          'BEM naming',
           'Media elements',
           'Web Storage',
-          'WebSocket',
-          'IndexedDB',
+          'W3C validation',
+          'Bootstrap',
           'Gulp',
           'Pug',
         ],
@@ -144,11 +148,11 @@ export const store: StoreType = {
         id: randomId(),
         title: 'CSS3',
         list: [
+          'Responsive design',
+          'Flexible design',
           'Animation',
-          'Media queries',
           'Gradients',
           '3D Transforms',
-          'Filter',
           'SASS',
           'LESS',
         ],
@@ -157,22 +161,28 @@ export const store: StoreType = {
     projects: [
       {
         id: randomId(),
+        appType: 'mobileApp',
         title: 'Social Network',
         description:
-          'Consectetur adipisicing elit. Ab alias aliquid animi quasi quisquam, repellendus sapiente',
-        image: {
-          small: '',
-          large: '',
+          'This application based on Create React App, Typescript and Redux. Developed with React Class' +
+          ' and functional components, React-router, React-Context, Redux-thunk, Redux-form, Axios, ESLint Airbnb,' +
+          ' Jest.',
+        image: '',
+        link: {
+          demo: 'social',
+          github: 'social',
         },
       },
       {
         id: randomId(),
+        appType: 'mobileApp',
         title: 'Todolist',
         description:
-          'Atque commodi dicta distinctio, dolor dolorem eum facere fugit hic illo incidunt ipsam libero, minima',
-        image: {
-          small: '',
-          large: '',
+          'This application based on Create React App, Typescript and Redux. Developed with functional components and React hooks, React-Context, Redux-thunk, React Formic, Axios, ESLint Airbnb, Jest, Storybook.',
+        image: '',
+        link: {
+          demo: 'todolist',
+          github: 'todolist',
         },
       },
     ],

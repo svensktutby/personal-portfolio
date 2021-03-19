@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 
 import s from './ContactInfo.module.scss';
 import styleLink from '../../common/styles/Link.module.scss';
-import { PersoanlInfoType } from '../../../bll/store';
+import { PersonalInfoType } from '../../../bll/store';
 import { SvgIcon } from '../../common/SvgIcon';
 
 type PropsType = {
-  personalInfo: PersoanlInfoType;
+  personalInfo: PersonalInfoType;
 };
 
 export const ContactInfo: FC<PropsType> = ({ personalInfo }) => {

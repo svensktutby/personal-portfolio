@@ -1,0 +1,18 @@
+@import "src/components/common/styles/base/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  background-color: $white;
+  border: 1px solid rgba($border-color, 0.8);
+
+  transition: box-shadow, $transition-time;
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: $shadow;
+    }
+  }
+}

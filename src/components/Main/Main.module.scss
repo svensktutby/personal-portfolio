@@ -34,11 +34,6 @@
 .content {
   position: relative;
   z-index: 2;
-  //display: flex;
-  //flex-wrap: wrap;
-  //align-items: center;
-  //justify-content: space-between;
-  //width: 100%;
 }
 
 .intro {
@@ -66,27 +61,8 @@
   font-size: 2rem;
 }
 
-.intro .btnWork {
+.btnWork {
   margin-left: 16px;
-
-  color: $text-color;
-
-  background-color: $white;
-  border: 1px solid $border-color;
-
-  @media (hover: hover) {
-    &:hover,
-    &:focus {
-      background-color: darken($white, 10%);
-      border-color: darken($border-color, 10%);
-    }
-
-    &:active {
-      color: rgba($text-color, 0.9);
-
-      background-color: darken($white, 15%);
-    }
-  }
 }
 
 .photo {

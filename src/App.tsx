@@ -17,6 +17,7 @@ type AppPropsType = {
 export const App: FC<AppPropsType> = ({ store }) => {
   const {
     navLinks,
+    filters,
     socialList,
     personalInfo,
     skills,
@@ -30,7 +31,11 @@ export const App: FC<AppPropsType> = ({ store }) => {
       <Main />
       <Skills skills={skills} heading={headings.skills} />
       <Hire heading={headings.hire} />
-      <Projects projects={projects} heading={headings.projects} />
+      <Projects
+        projects={projects}
+        heading={headings.projects}
+        filters={filters}
+      />
       <Contact heading={headings.contact} />
       <Footer socialList={socialList} personalInfo={personalInfo} />
     </div>

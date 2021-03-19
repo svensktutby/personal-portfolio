@@ -1,23 +1,9 @@
 @import "src/components/common/styles/base/variables";
 
 .skillCard {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   padding: 38px 24px;
 
   text-align: center;
-
-  background-color: $white;
-  border: 1px solid rgba($border-color, 0.8);
-
-  transition: box-shadow, $transition-time;
-
-  @media (hover: hover) {
-    &:hover {
-      box-shadow: $shadow;
-    }
-  }
 }
 
 .title,
@@ -39,7 +25,7 @@
   padding-left: 2rem;
 
   list-style-type: none;
-  font-size: 0.875rem;
+  font-size: $font-size-sm;
   line-height: 1.95;
   text-align: initial;
 }

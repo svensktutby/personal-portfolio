@@ -24,7 +24,7 @@ export const Main: FC = () => {
                 Download CV
               </a>
               <a
-                className={`${styleBtn.btn} ${s.btnWork}`}
+                className={`${styleBtn.btn} ${styleBtn.btnLight}  ${s.btnWork}`}
                 href="#projects"
                 role="button"
               >

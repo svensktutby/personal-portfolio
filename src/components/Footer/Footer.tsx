@@ -3,12 +3,12 @@ import React, { FC } from 'react';
 import s from './Footer.module.scss';
 import styleContainer from '../common/styles/Container.module.scss';
 import { Social } from './Social';
-import { PersoanlInfoType, SocialType } from '../../bll/store';
+import { PersonalInfoType, SocialType } from '../../bll/store';
 import { ContactInfo } from './ContactInfo';
 
 type PropsType = {
   socialList: Array<SocialType>;
-  personalInfo: PersoanlInfoType;
+  personalInfo: PersonalInfoType;
 };
 
 export const Footer: FC<PropsType> = ({ socialList, personalInfo }) => {

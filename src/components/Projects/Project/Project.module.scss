@@ -1,28 +1,61 @@
-.projectCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
+@import "src/components/common/styles/base/variables";
 
-  background-color: #ececec;
+.projectCard {
+  padding: 0;
+
+  @media (hover: hover) {
+    &:hover {
+      .btnWrapper,
+      .imageWrapper::before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .imageWrapper {
   position: relative;
 
   min-height: 250px;
+  background-color: $section-color-additional;
 
-  background-color: #c4c4c4;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity $transition-time;
+
+    background-color: $overlay;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
-.imageWrapper .imageLink {
+.btnWrapper {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
+  transition: opacity $transition-time;
+
   transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
 }
 
-.title,
+.btnDemo {
+  margin-bottom: 15px;
+}
+
+.info {
+  padding: 20px;
+}
+
 .description {
-  padding: 10px;
+  font-size: $font-size-sm;
 }
