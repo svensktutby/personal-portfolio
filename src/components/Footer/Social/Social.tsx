@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { v1 } from 'uuid';
 
 import s from './Social.module.scss';
 import styleLink from '../../common/styles/Link.module.scss';
@@ -16,7 +15,7 @@ export const Social: FC<PropsType> = ({ socialList }) => {
       <ul className={s.list}>
         {socialList.map((sl) => {
           return (
-            <li key={v1()} className={`${s.item} ${s[sl.title]}`}>
+            <li key={sl.id} className={`${s.item} ${s[sl.title]}`}>
               <a
                 className={`${styleLink.link} ${s.link}`}
                 href={sl.url}

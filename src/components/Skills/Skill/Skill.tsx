@@ -6,10 +6,10 @@ import { SvgIcon } from '../../common/SvgIcon';
 
 type PropsType = {
   title: string;
-  description: string;
+  list: Array<string>;
 };
 
-export const Skill: FC<PropsType> = ({ title, description }) => {
+export const Skill: FC<PropsType> = ({ title, list }) => {
   return (
     <div>
       <div className={s.skillCard}>
@@ -17,7 +17,13 @@ export const Skill: FC<PropsType> = ({ title, description }) => {
           <SvgIcon type={title} />
         </div>
         <h3 className={`${styleTitle.titleQuaternary} ${s.title}`}>{title}</h3>
-        <div className={s.description}>{description}</div>
+        <ul className={s.list}>
+          {list.map((item, idx) => (
+            <li key={idx} className={s.skill}>
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

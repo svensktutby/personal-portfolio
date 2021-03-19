@@ -20,6 +20,10 @@ $social-colors: (
   list-style-type: none;
 }
 
+.item {
+
+}
+
 .item:not(:first-child) {
   margin-left: 6px;
 }

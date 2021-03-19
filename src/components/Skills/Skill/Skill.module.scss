@@ -3,7 +3,7 @@
 .skillCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
   padding: 38px 24px;
 
   text-align: center;
@@ -20,9 +20,12 @@
   }
 }
 
+.title,
 .icon {
   margin-bottom: 18px;
+}
 
+.icon {
   svg {
     width: 44px;
 
@@ -30,11 +33,36 @@
   }
 }
 
-.description {
-  width: 100%;
+.list {
   min-height: 200px;
-  padding: 10px;
+  margin: 0;
+  padding-left: 2rem;
 
+  list-style-type: none;
   font-size: 0.875rem;
   line-height: 1.95;
+  text-align: initial;
+}
+
+.skill {
+  position: relative;
+
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+}
+
+.skill:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  width: 5px;
+  height: 11px;
+
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: $theme-color;
+  transform: rotate(45deg);
+  transform-origin: bottom left;
 }

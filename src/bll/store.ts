@@ -1,9 +1,9 @@
-import { v1 } from 'uuid';
+import { randomId } from '../utils/randomId';
 
 export type SkillType = {
   id: string;
   title: string;
-  description: string;
+  list: Array<string>;
 };
 
 export type ImageType = {
@@ -17,6 +17,7 @@ export type HeadingType = {
 };
 
 export type SocialType = {
+  id: string;
   title: string;
   url: string;
 };
@@ -58,63 +59,104 @@ export const store: StoreType = {
     navLinks: ['home', 'skills', 'projects', 'contact'],
     socialList: [
       {
+        id: randomId(),
         title: 'github',
         url: 'https://github.com/svensktutby',
       },
       {
+        id: randomId(),
         title: 'linkedin',
         url: 'https://www.linkedin.com/in/svensktutby',
       },
       {
+        id: randomId(),
         title: 'twitter',
         url: 'https://www.twitter.com/svensktutby',
       },
       {
+        id: randomId(),
         title: 'telegram',
         url: 'https://t.me/svensktutby',
       },
     ],
     skills: [
       {
-        id: v1(),
+        id: randomId(),
         title: 'React',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur inventore ipsam iusto nisi quasi quisquam, repellendus sapiente sint suscipit vel.',
+        list: [
+          'Functional components',
+          'Class components',
+          'Hooks',
+          'HOC',
+          'Lifecycle',
+          'Context',
+          'Material UI',
+          'Ant Design',
+          'Storybook',
+        ],
       },
       {
-        id: v1(),
+        id: randomId(),
         title: 'Redux',
-        description:
-          'Ab accusamus aperiam beatae dolores iusto, laborum magni maiores molestiae nesciunt quaerat repellendus saepe tempora ullam?',
+        list: [
+          'Flux',
+          'Redux ducks',
+          'Middleware',
+          'Thunk',
+          'Saga',
+          'Redux devtool',
+        ],
       },
       {
-        id: v1(),
+        id: randomId(),
         title: 'TypeScript',
-        description:
-          'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
+        list: ['Interface', 'Generics', 'Decorators', 'Enum', 'Infer'],
       },
       {
-        id: v1(),
+        id: randomId(),
         title: 'JavaScript',
-        description:
-          'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
+        list: [
+          'ES6',
+          'Promise, Async/Await',
+          'REST API',
+          'SOLID',
+          'OOP',
+          'TDD',
+          'Jest',
+          'Webpack',
+        ],
       },
       {
-        id: v1(),
+        id: randomId(),
         title: 'HTML5',
-        description:
-          'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
+        list: [
+          'W3C, WHATWG',
+          'Semantic',
+          'Media elements',
+          'Web Storage',
+          'WebSocket',
+          'IndexedDB',
+          'Gulp',
+          'Pug',
+        ],
       },
       {
-        id: v1(),
+        id: randomId(),
         title: 'CSS3',
-        description:
-          'Consectetur adipisicing elit. Cum impedit libero molestias, odit quaerat quas ratione sapiente.',
+        list: [
+          'Animation',
+          'Media queries',
+          'Gradients',
+          '3D Transforms',
+          'Filter',
+          'SASS',
+          'LESS',
+        ],
       },
     ],
     projects: [
       {
-        id: v1(),
+        id: randomId(),
         title: 'Social Network',
         description:
           'Consectetur adipisicing elit. Ab alias aliquid animi quasi quisquam, repellendus sapiente',
@@ -124,7 +166,7 @@ export const store: StoreType = {
         },
       },
       {
-        id: v1(),
+        id: randomId(),
         title: 'Todolist',
         description:
           'Atque commodi dicta distinctio, dolor dolorem eum facere fugit hic illo incidunt ipsam libero, minima',

@@ -19,11 +19,7 @@ export const Skills: FC<PropsType> = ({ skills, heading }) => {
 
         <div className={s.skillCards}>
           {skills.map((skill) => (
-            <Skill
-              key={skill.id}
-              title={skill.title}
-              description={skill.description}
-            />
+            <Skill key={skill.id} title={skill.title} list={skill.list} />
           ))}
         </div>
       </div>
