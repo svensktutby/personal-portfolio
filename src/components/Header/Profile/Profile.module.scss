@@ -1,0 +1,39 @@
+@import "../../common/styles/base/variables";
+@import "../../common/styles/base/mixins";
+
+.profile {
+  padding-bottom: 60px;
+
+  text-align: center;
+}
+
+.avatar {
+  width: 110px;
+  margin-bottom: 16px;
+
+  border: 5px solid $gray-darken;
+  border-radius: 50%;
+}
+
+.name {
+  display: block;
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: px-rem(18px);
+  color: $white;
+}
+
+.status {
+  display: block;
+  margin-top: 9px;
+  margin-bottom: 0;
+
+  line-height: 1.2;
+  color: $theme-color;
+}
+
+.notAvailable {
+  color: $gray;
+  text-decoration: line-through;
+}

@@ -1,5 +1,11 @@
 @import "src/components/common/styles/base/variables";
 
+::selection {
+  color: $white;
+
+  background-color: $theme-color;
+}
+
 .app {
   font-size: $font-size;
   line-height: $line-height;
@@ -7,8 +13,10 @@
   color: $text-color;
 }
 
-::selection {
-  color: $white;
+.sectionsWrapper {
+  padding-left: $aside-width;
 
-  background-color: $theme-color;
+  @media screen and (max-width: $screen-lg) {
+    padding-left: 0;
+  }
 }

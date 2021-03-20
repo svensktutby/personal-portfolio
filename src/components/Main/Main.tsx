@@ -7,14 +7,19 @@ import myPhoto from '../../assets/images/my-photo.png';
 import { Mouse } from '../common/Mouse';
 import styleBtn from '../common/styles/Button.module.scss';
 
-export const Main: FC = () => {
+type PropsType = {
+  name: string;
+  lastname: string;
+};
+
+export const Main: FC<PropsType> = ({ name, lastname }) => {
   return (
     <main className={s.main} id="home">
       <div className={`${styleContainer.container} ${s.container}`}>
         <div className={s.content}>
           <div className={s.intro}>
             <h1 className={`${styleTitle.titlePrimary} ${s.title}`}>
-              Andrei <span>Shved</span>
+              {name} <span>{lastname}</span>
             </h1>
 
             <p className={s.headline}>I'm a Frontend Developer</p>
@@ -35,7 +40,7 @@ export const Main: FC = () => {
         </div>
 
         <div className={s.photo}>
-          <img className={s.image} src={myPhoto} alt="Andrei Shved" />
+          <img className={s.image} src={myPhoto} alt={`${name} ${lastname}`} />
         </div>
 
         <div className={s.mouseWrapper}>

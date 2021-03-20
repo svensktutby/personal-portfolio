@@ -2,26 +2,26 @@ import React, { FC } from 'react';
 
 import s from './ContactInfo.module.scss';
 import styleLink from '../../common/styles/Link.module.scss';
-import { PersonalInfoType } from '../../../bll/store';
+import { ContactType } from '../../../bll/store';
 import { SvgIcon } from '../../common/SvgIcon';
 
 type PropsType = {
-  personalInfo: PersonalInfoType;
+  contact: ContactType;
 };
 
-export const ContactInfo: FC<PropsType> = ({ personalInfo }) => {
+export const ContactInfo: FC<PropsType> = ({ contact }) => {
   return (
     <div className={s.contactInfo}>
-      {Object.entries(personalInfo).map((pi) => {
+      {Object.entries(contact).map((pi) => {
         const [key, value] = pi;
 
         return (
-          <div key={key} className={s.info}>
+          <div key={key} className={s.contact}>
             <div className={s.icon}>
               <SvgIcon type={key} />
             </div>
 
-            <p className={s.infoContent}>
+            <p className={s.contactContent}>
               <a
                 className={styleLink.link}
                 href={value.url}

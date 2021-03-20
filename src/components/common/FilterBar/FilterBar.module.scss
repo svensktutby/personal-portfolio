@@ -45,7 +45,7 @@
   @media (hover: hover) {
     &:hover,
     &:focus,
-    &Selected {
+    &Active {
       color: $theme-color;
     }
 
@@ -55,7 +55,7 @@
 
     &:hover::after,
     &:focus::after,
-    &Selected::after {
+    &Active::after {
       opacity: 1;
     }
 

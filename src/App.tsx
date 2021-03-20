@@ -19,25 +19,34 @@ export const App: FC<AppPropsType> = ({ store }) => {
     navLinks,
     filters,
     socialList,
-    personalInfo,
+    profile,
     skills,
     projects,
     headings,
   } = store.getState.call(store);
 
+  const { name, lastname, availableForWork } = profile;
+
   return (
     <div className={s.app}>
-      <Header navLinks={navLinks} />
-      <Main />
-      <Skills skills={skills} heading={headings.skills} />
-      <Hire heading={headings.hire} />
-      <Projects
-        projects={projects}
-        heading={headings.projects}
-        filters={filters}
+      <Header
+        navLinks={navLinks}
+        name={name}
+        lastname={lastname}
+        availableForWork={availableForWork}
       />
-      <Contact heading={headings.contact} />
-      <Footer socialList={socialList} personalInfo={personalInfo} />
+      <div className={s.sectionsWrapper}>
+        <Main name={name} lastname={lastname} />
+        <Skills skills={skills} heading={headings.skills} />
+        <Hire heading={headings.hire} />
+        <Projects
+          projects={projects}
+          heading={headings.projects}
+          filters={filters}
+        />
+        <Contact heading={headings.contact} />
+        <Footer socialList={socialList} profile={profile} />
+      </div>
     </div>
   );
 };

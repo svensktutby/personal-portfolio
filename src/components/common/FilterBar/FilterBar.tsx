@@ -14,13 +14,13 @@ export const FilterBar: FC<PropsType> = ({ list }) => {
   return (
     <ul className={s.list}>
       <li>
-        <a className={`${s.filter} ${s.filterSelected}`} href={'*'}>
+        <a className={`${s.filter} ${s.filterActive}`} href={'*'}>
           All
         </a>
       </li>
-      {list.map((item) => (
-        <li>
-          <a className={s.filter} href="#">
+      {list.map((item, idx) => (
+        <li key={idx}>
+          <a className={s.filter} href={`#${item}`}>
             {`${capitalizeFirstLetter(unCamelCase(item))}s`}
           </a>
         </li>

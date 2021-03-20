@@ -1,6 +1,18 @@
 @import "src/components/common/styles/base/variables";
 
-.header {
-  height: $header-height; //FIXME remove temporary
-}
+.header::before {
+  content: "";
+  position: relative;
+  top: 0;
+  right: 0;
 
+  display: none;
+  width: 100%;
+  height: $header-height;
+
+  background-color: $theme-color-dark;
+
+  @media screen and (max-width: $screen-lg) {
+    display: block;
+  }
+}
