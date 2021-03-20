@@ -1,3 +1,5 @@
+@import "src/components/common/styles/base/variables";
+
 .form {
   display: flex;
   flex-direction: column;
@@ -19,14 +21,27 @@
 .emailTitle {
   flex: 0 0 50%;
   max-width: 50%;
+
+  @media screen and (max-width: $screen-md) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .nameTitle {
-  padding-right: 15px;
+  padding-right: $container-indent-lg;
+
+  @media screen and (max-width: $screen-md) {
+    padding-right: 0;
+  }
 }
 
 .emailTitle {
-  padding-left: 15px;
+  padding-left: $container-indent-lg;
+
+  @media screen and (max-width: $screen-md) {
+    padding-left: 0;
+  }
 }
 
 .message {

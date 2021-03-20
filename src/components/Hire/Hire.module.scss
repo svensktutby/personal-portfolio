@@ -51,5 +51,15 @@
 
   & > div {
     margin-bottom: 0;
+
+    @media screen and (max-width: $screen-md) {
+      margin-bottom: 26px;
+    }
+  }
+
+  @media screen and (max-width: $screen-md) {
+    display: block;
+
+    text-align: center;
   }
 }

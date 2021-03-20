@@ -169,8 +169,8 @@ export const store: StoreType = {
           ' Jest.',
         image: '',
         link: {
-          demo: 'social',
-          github: 'social',
+          demo: 'https://svensktutby.github.io/react-way-of-samurai',
+          github: 'https://github.com/svensktutby/react-way-of-samurai',
         },
       },
       {
@@ -181,8 +181,8 @@ export const store: StoreType = {
           'This application based on Create React App, Typescript and Redux. Developed with functional components and React hooks, React-Context, Redux-thunk, React Formic, Axios, ESLint Airbnb, Jest, Storybook.',
         image: '',
         link: {
-          demo: 'todolist',
-          github: 'todolist',
+          demo: 'https://svensktutby.github.io/todolist',
+          github: 'https://github.com/svensktutby/todolist',
         },
       },
     ],

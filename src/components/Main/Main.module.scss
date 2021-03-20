@@ -1,4 +1,5 @@
 @import "src/components/common/styles/base/variables";
+@import "src/components/common/styles/base/mixins";
 
 .main {
   position: relative;
@@ -22,6 +23,11 @@
 
     background-color: $overlay;
   }
+
+  @media screen and (max-width: $screen-md) {
+    height: auto;
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -33,11 +39,23 @@
 
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+
+  @media screen and (max-width: $screen-lg) {
+    padding-top: 8rem;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    padding-top: 0;
+  }
 }
 
 .intro {
   text-align: center;
+
+  @media screen and (max-width: $screen-md) {
+    text-align: initial;
+  }
 }
 
 .intro .title,
@@ -46,11 +64,25 @@
   color: $white;
 }
 
-.title {
+.intro .title {
   word-break: initial;
 
   & span {
     color: $theme-color;
+
+    @media screen and (max-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $screen-md) {
+    @include font-size(62px);
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    @include font-size(48px);
+
+    margin-bottom: px-rem(20px);
   }
 }
 
@@ -59,30 +91,74 @@
   margin-bottom: 3rem;
 
   font-size: 2rem;
+
+  @media screen and (max-width: $screen-md) {
+    @include font-size(30px);
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    @include font-size(26px);
+
+    margin-bottom: px-rem(20px);
+  }
+}
+
+.btnWrapper {
+  & a {
+    @media screen and (max-width: $screen-sm) {
+      min-width: 120px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
 }
 
 .btnWork {
   margin-left: 16px;
+
+  @media screen and (max-width: $screen-sm) {
+    margin-left: 6px;
+  }
 }
 
 .photo {
   position: absolute;
   z-index: 2;
-  right: 10vh;
+  right: 20vh;
   bottom: 0;
 
   width: 50vh;
+
+  @media screen and (max-width: $screen-xxl) {
+    right: 10vh;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    right: 4vh;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    top: 2%;
+    right: 0.5vh;
+    bottom: initial;
+
+    width: 80%;
+  }
 }
 
 .mouseWrapper {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   right: 0;
   bottom: 5%;
   left: 0;
 
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
 }
 
 .link {

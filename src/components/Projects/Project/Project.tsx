@@ -21,12 +21,19 @@ export const Project: FC<PropsType> = ({ title, description, image, link }) => {
         <div className={s.imageWrapper}>
           <img className={s.image} src={image || defaultImage} alt={title} />
           <div className={s.btnWrapper}>
-            <a className={`${styleBtn.btn} ${s.btnDemo}`} href={link.demo}>
+            <a
+              className={`${styleBtn.btn} ${s.btnDemo}`}
+              href={link.demo}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               Demo
             </a>
             <a
               className={`${styleBtn.btn} ${styleBtn.btnLight}`}
               href={link.github}
+              target="_blank"
+              rel="noreferrer noopener"
             >
               GitHub
             </a>

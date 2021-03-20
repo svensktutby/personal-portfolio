@@ -7,4 +7,8 @@
   margin-right: auto;
   margin-left: auto;
   padding: 85px 50px;
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 65px 25px;
+  }
 }

@@ -18,6 +18,7 @@
   position: relative;
 
   min-height: 250px;
+
   background-color: $section-color-additional;
 
   &::before {
@@ -28,11 +29,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transition: opacity $transition-time;
 
     background-color: $overlay;
     visibility: hidden;
     opacity: 0;
+
+    transition: opacity $transition-time;
   }
 }
 
@@ -41,11 +43,16 @@
   z-index: 2;
   top: 50%;
   left: 50%;
-  transition: opacity $transition-time;
 
   transform: translate(-50%, -50%);
   visibility: hidden;
   opacity: 0;
+
+  transition: opacity $transition-time;
+
+  & a {
+    display: block;
+  }
 }
 
 .btnDemo {

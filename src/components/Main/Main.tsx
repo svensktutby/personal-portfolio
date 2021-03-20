@@ -14,17 +14,17 @@ export const Main: FC = () => {
         <div className={s.content}>
           <div className={s.intro}>
             <h1 className={`${styleTitle.titlePrimary} ${s.title}`}>
-              Andrei&nbsp;<span>Shved</span>
+              Andrei <span>Shved</span>
             </h1>
 
             <p className={s.headline}>I'm a Frontend Developer</p>
 
-            <div>
+            <div className={s.btnWrapper}>
               <a className={styleBtn.btn} href="#" role="button">
                 Download CV
               </a>
               <a
-                className={`${styleBtn.btn} ${styleBtn.btnLight}  ${s.btnWork}`}
+                className={`${styleBtn.btn} ${styleBtn.btnLight} ${s.btnWork}`}
                 href="#projects"
                 role="button"
               >

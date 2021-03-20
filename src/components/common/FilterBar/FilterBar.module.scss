@@ -20,6 +20,8 @@
   color: $text-color;
   text-decoration: none;
 
+  transition: color $transition-time;
+
   &::after {
     content: "";
     position: absolute;

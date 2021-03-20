@@ -3,12 +3,26 @@
 .contactInfo {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  margin-right: -$container-indent-lg;
+  margin-left: -$container-indent-lg;
   padding-top: 80px;
   padding-bottom: 80px;
 
   border-bottom: 2px solid rgba(85, 85, 85, 0.2);
+}
+
+.info {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  padding-right: $container-indent-lg;
+  padding-left: $container-indent-lg;
+  text-align: center;
+
+  @media screen and (max-width: $screen-sm) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: $grid-gutter-width;
+  }
 }
 
 .icon {

@@ -18,4 +18,13 @@
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media screen and (max-width: $screen-sm) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.copyright {
+  padding-top: 15px;
 }
