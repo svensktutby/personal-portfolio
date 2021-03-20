@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import s from './Nav.module.scss';
 import styleContainer from '../common/styles/Container.module.scss';
 import styleLink from '../common/styles/Link.module.scss';
-import { Profile } from '../Header/Profile';
+import { Profile } from './Profile';
 
 type PropsType = {
   navLinks: Array<string>;
