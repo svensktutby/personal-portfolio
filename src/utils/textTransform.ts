@@ -5,3 +5,5 @@ export const unCamelCase = (str: string): string =>
 
 export const capitalizeFirstLetter = (str: string): string =>
   `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+
+export const concatString = (str: string): string => str.replace(/\s/g, '');

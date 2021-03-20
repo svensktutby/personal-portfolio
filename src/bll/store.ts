@@ -45,7 +45,6 @@ export type ProjectType = {
   appType: 'mobileApp' | 'webSite' | 'landingPage';
   title: string;
   description: string;
-  image: string;
   link: LinkType;
 };
 
@@ -172,9 +171,9 @@ export const store: StoreType = {
         title: 'Social Network',
         description:
           'This application based on Create React App, Typescript and Redux. Developed with React Class' +
-          ' and functional components, React-router, React-Context, Redux-thunk, Redux-form, Axios, ESLint Airbnb,' +
+          ' and functional components, React-router, React-Context, Redux-thunk, Redux-form, Axios, REST API, ESLint' +
+          ' Airbnb,' +
           ' Jest.',
-        image: '',
         link: {
           demo: 'https://svensktutby.github.io/react-way-of-samurai',
           github: 'https://github.com/svensktutby/react-way-of-samurai',
@@ -185,11 +184,57 @@ export const store: StoreType = {
         appType: 'mobileApp',
         title: 'Todolist',
         description:
-          'This application based on Create React App, Typescript and Redux. Developed with functional components and React hooks, React-Context, Redux-thunk, React Formic, Axios, ESLint Airbnb, Jest, Storybook.',
-        image: '',
+          'This application based on Create React App, Typescript and Redux. Developed with functional components and React hooks, React-Context, Redux-thunk, React Formic, Axios, REST API, ESLint Airbnb, Jest, Storybook.',
         link: {
           demo: 'https://svensktutby.github.io/todolist',
           github: 'https://github.com/svensktutby/todolist',
+        },
+      },
+      {
+        id: randomId(),
+        appType: 'mobileApp',
+        title: 'Movie Search',
+        description:
+          'This application was developed with Vanilla JS, semantic tags HTML5, CSS3 transformations and animations, Swiper library, REST API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
+        link: {
+          demo: 'https://svensktutby-movie-search.netlify.app',
+          github: 'https://github.com/svensktutby/',
+        },
+      },
+      {
+        id: randomId(),
+        appType: 'mobileApp',
+        title: 'English for kids',
+        description:
+          'This game application was developed with Vanilla JS, semantic tags HTML5, CSS3 transformations and animations, media and web storage HTML5 API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
+        link: {
+          demo: 'https://svensktutby-english-for-kids.netlify.app',
+          github: 'https://github.com/svensktutby/',
+        },
+      },
+      {
+        id: randomId(),
+        appType: 'landingPage',
+        title: 'Singolo',
+        description:
+          'This landing page was developed with pixel perfect method, W3C validation, responsive and' +
+          ' flexible layout, semantic tags, CSS3 transformations and animations, cross browser support, Vanilla JS' +
+          ' touch slider and effects.',
+        link: {
+          demo: 'https://svensktutby.github.io/singolo',
+          github: 'https://github.com/svensktutby/singolo',
+        },
+      },
+      {
+        id: randomId(),
+        appType: 'webSite',
+        title: 'Mishka',
+        description:
+          'This web site was developed with pixel perfect method, W3C validation, responsive and flexible layout,' +
+          ' semantic tags, CSS3 transformations and animations, cross browser support. Were used Gulp, SCSS, Stylelint.',
+        link: {
+          demo: 'https://svensktutby.github.io/html-a-mishka/build',
+          github: 'https://github.com/svensktutby/html-a-mishka',
         },
       },
     ],

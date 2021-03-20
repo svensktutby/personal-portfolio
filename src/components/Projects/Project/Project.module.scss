@@ -3,21 +3,17 @@
 .projectCard {
   padding: 0;
 
-  @media (hover: hover) {
-    &:hover {
-      .btnWrapper,
-      .imageWrapper::before {
-        visibility: visible;
-        opacity: 1;
-      }
+  &:hover {
+    .btnWrapper,
+    .imageWrapper::before {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
 
 .imageWrapper {
   position: relative;
-
-  min-height: 250px;
 
   background-color: $section-color-additional;
 

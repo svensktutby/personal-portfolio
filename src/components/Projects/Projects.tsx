@@ -6,6 +6,23 @@ import { HeadingType, ProjectType } from '../../bll/store';
 import { Project } from './Project';
 import { Heading } from '../common/Heading';
 import { FilterBar } from '../common/FilterBar';
+import { concatString } from '../../utils/textTransform';
+
+import SocialNetwork from '../../assets/images/projects/social-network.png';
+import Todolist from '../../assets/images/projects/todolist.png';
+import Singolo from '../../assets/images/projects/singolo.png';
+import Mishka from '../../assets/images/projects/mishka.png';
+import MovieSearch from '../../assets/images/projects/movie-search.png';
+import Englishforkids from '../../assets/images/projects/english-for-kids.png';
+
+const images: Record<string, string> = {
+  SocialNetwork,
+  Todolist,
+  Singolo,
+  Mishka,
+  MovieSearch,
+  Englishforkids,
+};
 
 type PropsType = {
   projects: Array<ProjectType>;
@@ -22,15 +39,20 @@ export const Projects: FC<PropsType> = ({ projects, heading, filters }) => {
         <FilterBar list={filters} />
 
         <div className={s.projectCards}>
-          {projects.map((project) => (
-            <Project
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              link={project.link}
-            />
-          ))}
+          {projects.map((project) => {
+            const concatTitle = concatString(project.title);
+            const image = images[concatTitle];
+
+            return (
+              <Project
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                image={image}
+                link={project.link}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
