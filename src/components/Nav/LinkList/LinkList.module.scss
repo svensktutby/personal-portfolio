@@ -1,0 +1,74 @@
+@import "../../common/styles/base/variables";
+
+.list {
+  margin: 0;
+  padding-left: 0;
+
+  list-style-type: none;
+  text-align: center;
+  text-transform: capitalize;
+
+  &.active {
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+    padding-top: 80px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transition-duration: $transition-time;
+    transition-property: height, width, top, opacity;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: $screen-lg) {
+    padding-top: 20px;
+  }
+}
+
+.item {
+  @media screen and (max-width: $screen-lg) {
+    padding: 25px 0;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: $screen-lg) {
+    padding: 6px 0;
+  }
+}
+
+.item:not(:last-child) {
+  margin-bottom: 28px;
+
+  @media screen and (max-width: $screen-lg) {
+    margin-bottom: 0;
+  }
+}
+
+.list .link {
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+
+  &.active {
+    color: $link-color-hover;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    display: inline-block;
+    padding: 12px;
+
+    font-size: 2rem;
+  }
+}

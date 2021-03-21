@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import s from './Contact.module.scss';
-import styleContainer from '../common/styles/Container.module.scss';
+import styleContainer from '../common/styles/container.module.scss';
 import { Form } from './Form';
 import { HeadingType } from '../../bll/store';
 import { Heading } from '../common/Heading';

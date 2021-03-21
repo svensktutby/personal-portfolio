@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 import s from './Skill.module.scss';
-import styleTitle from '../../common/styles/Title.module.scss';
-import styleCard from '../../common/styles/Card.module.scss';
+import styleTitle from '../../common/styles/title.module.scss';
+import styleCard from '../../common/styles/card.module.scss';
 import { SvgIcon } from '../../common/SvgIcon';
 
 type PropsType = {

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import s from './ContactInfo.module.scss';
-import styleLink from '../../common/styles/Link.module.scss';
+import styleLink from '../../common/styles/link.module.scss';
 import { ContactType } from '../../../bll/store';
 import { SvgIcon } from '../../common/SvgIcon';
 

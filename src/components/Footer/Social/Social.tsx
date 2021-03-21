@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import s from './Social.module.scss';
-import styleLink from '../../common/styles/Link.module.scss';
+import styleLink from '../../common/styles/link.module.scss';
 import { SocialType } from '../../../bll/store';
 import { SvgIcon } from '../../common/SvgIcon';
 

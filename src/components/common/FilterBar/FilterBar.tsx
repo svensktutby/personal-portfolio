@@ -14,7 +14,7 @@ export const FilterBar: FC<PropsType> = ({ list }) => {
   return (
     <ul className={s.list}>
       <li>
-        <a className={`${s.filter} ${s.filterActive}`} href={'*'}>
+        <a className={`${s.filter} ${s.active}`} href={'*'}>
           All
         </a>
       </li>

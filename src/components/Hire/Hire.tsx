@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 import s from './Hire.module.scss';
-import styleContainer from '../common/styles/Container.module.scss';
-import styleBtn from '../common/styles/Button.module.scss';
+import styleContainer from '../common/styles/container.module.scss';
+import styleBtn from '../common/styles/button.module.scss';
 import { Heading } from '../common/Heading';
 import { HeadingType } from '../../bll/store';
 

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
 import s from './Main.module.scss';
-import styleContainer from '../common/styles/Container.module.scss';
-import styleTitle from '../common/styles/Title.module.scss';
+import styleContainer from '../common/styles/container.module.scss';
+import styleTitle from '../common/styles/title.module.scss';
 import myPhoto from '../../assets/images/my-photo.png';
 import { Mouse } from '../common/Mouse';
-import styleBtn from '../common/styles/Button.module.scss';
+import styleBtn from '../common/styles/button.module.scss';
 
 type PropsType = {
   name: string;

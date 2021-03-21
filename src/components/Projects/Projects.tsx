@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 
 import s from './Projects.module.scss';
-import styleContainer from '../common/styles/Container.module.scss';
+import styleContainer from '../common/styles/container.module.scss';
+import styleCardsLayout from '../common/styles/cardsLayout.module.scss';
 import { HeadingType, ProjectType } from '../../bll/store';
 import { Project } from './Project';
 import { Heading } from '../common/Heading';
@@ -36,9 +37,11 @@ export const Projects: FC<PropsType> = ({ projects, heading, filters }) => {
       <div className={`${styleContainer.container} ${s.container}`}>
         <Heading title={heading.title} description={heading.description} />
 
-        <FilterBar list={filters} />
+        <div className={s.filterWrapper}>
+          <FilterBar list={filters} />
+        </div>
 
-        <div className={s.projectCards}>
+        <div className={styleCardsLayout.layout}>
           {projects.map((project) => {
             const concatTitle = concatString(project.title);
             const image = images[concatTitle];

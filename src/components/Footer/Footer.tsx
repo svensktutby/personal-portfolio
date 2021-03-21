@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import s from './Footer.module.scss';
-import styleContainer from '../common/styles/Container.module.scss';
+import styleContainer from '../common/styles/container.module.scss';
 import { Social } from './Social';
 import { ProfileType, SocialType } from '../../bll/store';
 import { ContactInfo } from './ContactInfo';

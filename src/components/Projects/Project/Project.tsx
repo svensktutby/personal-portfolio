@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
 import s from './Project.module.scss';
-import styleBtn from '../../common/styles/Button.module.scss';
-import styleTitle from '../../common/styles/Title.module.scss';
-import styleCard from '../../common/styles/Card.module.scss';
+import styleBtn from '../../common/styles/button.module.scss';
+import styleTitle from '../../common/styles/title.module.scss';
+import styleCard from '../../common/styles/card.module.scss';
 import defaultImage from '../../../assets/images/no-image.svg';
 import { LinkType } from '../../../bll/store';
 

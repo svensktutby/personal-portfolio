@@ -195,7 +195,8 @@ export const store: StoreType = {
         appType: 'mobileApp',
         title: 'Movie Search',
         description:
-          'This application was developed with Vanilla JS, semantic tags HTML5, CSS3 transformations and animations, Swiper library, REST API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
+          'This application was developed with Vanilla JS, semantic HTML5 tags, CSS3 transformations and animations,' +
+          ' Swiper library, REST API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
         link: {
           demo: 'https://svensktutby-movie-search.netlify.app',
           github: 'https://github.com/svensktutby/',
@@ -206,7 +207,7 @@ export const store: StoreType = {
         appType: 'mobileApp',
         title: 'English for kids',
         description:
-          'This game application was developed with Vanilla JS, semantic tags HTML5, CSS3 transformations and animations, media and web storage HTML5 API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
+          'This game application was developed with Vanilla JS, semantic HTML5 tags, CSS3 transformations and animations, media and web storage HTML5 API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
         link: {
           demo: 'https://svensktutby-english-for-kids.netlify.app',
           github: 'https://github.com/svensktutby/',
@@ -217,8 +218,8 @@ export const store: StoreType = {
         appType: 'landingPage',
         title: 'Singolo',
         description:
-          'This landing page was developed with pixel perfect method, W3C validation, responsive and' +
-          ' flexible layout, semantic tags, CSS3 transformations and animations, cross browser support, Vanilla JS' +
+          'This landing page was developed with perfect pixel method, W3C validation, responsive and' +
+          ' flexible layout, semantic HTML5 tags, CSS3 transformations and animations, cross browser support, Vanilla JS' +
           ' touch slider and effects.',
         link: {
           demo: 'https://svensktutby.github.io/singolo',
@@ -230,8 +231,8 @@ export const store: StoreType = {
         appType: 'webSite',
         title: 'Mishka',
         description:
-          'This web site was developed with pixel perfect method, W3C validation, responsive and flexible layout,' +
-          ' semantic tags, CSS3 transformations and animations, cross browser support. Were used Gulp, SCSS, Stylelint.',
+          'This web site was developed with perfect pixel method, W3C validation, responsive and flexible layout,' +
+          ' semantic HTML5 tags, CSS3 transformations and animations, cross browser support. Were used Gulp, SCSS, Stylelint.',
         link: {
           demo: 'https://svensktutby.github.io/html-a-mishka/build',
           github: 'https://github.com/svensktutby/html-a-mishka',

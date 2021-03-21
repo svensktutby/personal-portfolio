@@ -1,9 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import s from './Nav.module.scss';
-import styleContainer from '../common/styles/Container.module.scss';
-import styleLink from '../common/styles/Link.module.scss';
+import styleContainer from '../common/styles/container.module.scss';
 import { Profile } from './Profile';
+import { Burger } from '../common/Burger';
+import { LinkList } from './LinkList';
+import { Overlay } from '../common/Overlay';
 
 type PropsType = {
   navLinks: Array<string>;
@@ -18,9 +20,17 @@ export const Nav: FC<PropsType> = ({
   lastname,
   availableForWork,
 }) => {
+  const [menuActive, setMenuActive] = useState(false);
+
+  const closeHandler = () => {
+    setMenuActive(false);
+  };
+
   return (
     <nav className={s.nav}>
       <div className={`${styleContainer.container} ${s.container}`}>
+        <Burger status={menuActive} toggleMenu={setMenuActive} />
+
         <Profile
           homeLink={navLinks[0]}
           name={name}
@@ -28,17 +38,13 @@ export const Nav: FC<PropsType> = ({
           availableForWork={availableForWork}
         />
 
-        <ul className={s.list}>
-          {navLinks.map((nl, idx) => {
-            return (
-              <li key={idx} className={s.item}>
-                <a className={`${styleLink.link} ${s.link}`} href={`#${nl}`}>
-                  {nl}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {menuActive ? (
+          <Overlay closeHandler={closeHandler}>
+            <LinkList links={navLinks} active={menuActive} />
+          </Overlay>
+        ) : (
+          <LinkList links={navLinks} active={menuActive} />
+        )}
       </div>
     </nav>
   );

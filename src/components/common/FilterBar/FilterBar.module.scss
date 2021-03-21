@@ -38,11 +38,11 @@
     transition: opacity $transition-time, background-color $transition-time;
   }
 
-  &Active {
+  &.active {
     color: $theme-color;
   }
 
-  &Active::after {
+  &.active::after {
     opacity: 1;
   }
 

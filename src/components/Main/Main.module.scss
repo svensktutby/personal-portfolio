@@ -24,10 +24,6 @@
     background-color: $overlay;
   }
 
-  @media screen and (max-width: $screen-lg) {
-    height: calc(100vh - #{$header-height});
-  }
-
   @media screen and (max-width: $screen-md) {
     height: auto;
     overflow: hidden;
@@ -37,9 +33,11 @@
 .container {
   display: flex;
   align-items: center;
-  height: 100%;
-}
 
+  @media screen and (max-width: $screen-md) {
+    padding-top: 140px;
+  }
+}
 
 .content {
   position: relative;
@@ -142,7 +140,7 @@
   }
 
   @media screen and (max-width: $screen-md) {
-    top: 2%;
+    top: calc(#{$header-height} + 2%);
     right: 0.5vh;
     bottom: initial;
 
