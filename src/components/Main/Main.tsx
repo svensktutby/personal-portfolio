@@ -26,7 +26,9 @@ export const Main: FC<PropsType> = ({ name, lastname, navLinks }) => {
               {name} <span>{lastname}</span>
             </h1>
 
-            <p className={s.headline}>I'm a Frontend Developer</p>
+            <p className={`${s.headline} ${s.typewriter}`}>
+              I'm a <span>Frontend Developer&nbsp;</span>
+            </p>
 
             <div className={s.btnWrapper}>
               <a className={styleBtn.btn} href="/#">
