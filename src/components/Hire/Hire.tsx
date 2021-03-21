@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-scroll';
 
 import s from './Hire.module.scss';
 import styleContainer from '../common/styles/container.module.scss';
@@ -8,18 +9,24 @@ import { HeadingType } from '../../bll/store';
 
 type PropsType = {
   heading: HeadingType;
+  contactLink: string;
 };
 
-export const Hire: FC<PropsType> = ({ heading }) => {
+export const Hire: FC<PropsType> = ({ heading, contactLink }) => {
   return (
     <section className={s.hire}>
       <div className={`${styleContainer.container} ${s.container}`}>
         <div className={s.content}>
           <Heading title={heading.title} description={heading.description} />
 
-          <a className={styleBtn.btn} href="#contact" role="button">
+          <Link
+            className={styleBtn.btn}
+            to={contactLink}
+            smooth={true}
+            duration={500}
+          >
             Hire me
-          </a>
+          </Link>
         </div>
       </div>
     </section>

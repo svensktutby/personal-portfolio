@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-scroll';
 
 import s from './Main.module.scss';
 import styleContainer from '../common/styles/container.module.scss';
@@ -10,9 +11,12 @@ import styleBtn from '../common/styles/button.module.scss';
 type PropsType = {
   name: string;
   lastname: string;
+  navLinks: Array<string>;
 };
 
-export const Main: FC<PropsType> = ({ name, lastname }) => {
+export const Main: FC<PropsType> = ({ name, lastname, navLinks }) => {
+  const [, skillsLink, projectsLink] = navLinks;
+
   return (
     <main className={s.main} id="home">
       <div className={`${styleContainer.container} ${s.container}`}>
@@ -25,16 +29,17 @@ export const Main: FC<PropsType> = ({ name, lastname }) => {
             <p className={s.headline}>I'm a Frontend Developer</p>
 
             <div className={s.btnWrapper}>
-              <a className={styleBtn.btn} href="#" role="button">
+              <a className={styleBtn.btn} href="/#">
                 Download CV
               </a>
-              <a
+              <Link
                 className={`${styleBtn.btn} ${styleBtn.btnLight} ${s.btnWork}`}
-                href="#projects"
-                role="button"
+                to={projectsLink}
+                smooth={true}
+                duration={500}
               >
                 My work
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -44,9 +49,9 @@ export const Main: FC<PropsType> = ({ name, lastname }) => {
         </div>
 
         <div className={s.mouseWrapper}>
-          <a className={s.link} href="#skills">
+          <Link className={s.link} to={skillsLink} smooth={true} duration={500}>
             <Mouse />
-          </a>
+          </Link>
         </div>
       </div>
     </main>

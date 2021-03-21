@@ -19,6 +19,7 @@
   font-size: $font-size-sm;
   color: $text-color;
   text-decoration: none;
+  word-break: initial;
 
   transition: color $transition-time;
 

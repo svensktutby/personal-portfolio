@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-scroll';
 
 import s from './Profile.module.scss';
 import myAvatar from '../../../assets/images/my-avatar.jpg';
@@ -22,9 +23,9 @@ export const Profile: FC<PropsType> = ({
 
   return (
     <div className={s.profile}>
-      <a href={`#${homeLink}`}>
+      <Link className={s.link} to={homeLink} smooth={true} duration={500}>
         <img className={s.avatar} src={myAvatar} alt="Avatar" />
-      </a>
+      </Link>
       <span className={s.name}>
         {name} {lastname}
       </span>

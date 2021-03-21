@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-scroll';
 
 import s from './LinkList.module.scss';
 import styleLink from '../../common/styles/link.module.scss';
@@ -16,9 +17,16 @@ export const LinkList: FC<PropsType> = ({ links, active }) => {
       {links.map((link, idx) => {
         return (
           <li key={idx} className={s.item}>
-            <a className={`${styleLink.link} ${s.link}`} href={`#${link}`}>
+            <Link
+              className={`${styleLink.link} ${s.link}`}
+              to={link}
+              smooth={true}
+              duration={500}
+              activeClass={s.active}
+              spy={true}
+            >
               {link}
-            </a>
+            </Link>
           </li>
         );
       })}

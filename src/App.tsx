@@ -36,9 +36,9 @@ export const App: FC<AppPropsType> = ({ store }) => {
         availableForWork={availableForWork}
       />
       <div className={s.sectionsWrapper}>
-        <Main name={name} lastname={lastname} />
+        <Main name={name} lastname={lastname} navLinks={navLinks} />
         <Skills skills={skills} heading={headings.skills} />
-        <Hire heading={headings.hire} />
+        <Hire heading={headings.hire} contactLink={navLinks[3]} />
         <Projects
           projects={projects}
           heading={headings.projects}
