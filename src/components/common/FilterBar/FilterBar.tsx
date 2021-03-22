@@ -13,7 +13,7 @@ type PropsType = {
 };
 
 export const FilterBar: FC<PropsType> = ({ filters, setFilter }) => {
-  const [activeLink, setActiveLink] = useState('all');
+  const [activeLink, setActiveLink] = useState(filters[0]);
 
   return (
     <ul className={s.list}>

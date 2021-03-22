@@ -2,11 +2,6 @@
 
 .form {
   display: flex;
-  flex-direction: column;
-}
-
-.formInner {
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -50,12 +45,24 @@
   resize: none;
 }
 
-.submitWrapper {
-  margin-top: auto;
-
-  text-align: center;
+.submitWrapper,
+.submitWrapper button {
+  position: relative;
+  z-index: 1;
 }
 
-.submit {
-  display: inline-block;
+.sendingText {
+  animation: blink 0.7s ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: rgba($white, 1);
+  }
+  50% {
+    color: rgba($white, 0.5);
+  }
+  100% {
+    color: rgba($white, 1);
+  }
 }
