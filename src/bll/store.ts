@@ -40,9 +40,12 @@ export type LinkType = {
   github: string;
 };
 
-export type ProjectType = {
+export type ProjectType = 'mobileApp' | 'webSite' | 'landingPage';
+export type FilterType = 'all' | ProjectType;
+
+export type ProjectItemType = {
   id: string;
-  appType: 'mobileApp' | 'webSite' | 'landingPage';
+  projectType: ProjectType;
   title: string;
   description: string;
   link: LinkType;
@@ -50,9 +53,9 @@ export type ProjectType = {
 
 export type RootStateType = {
   navLinks: Array<string>;
-  filters: Array<string>;
+  filters: Array<FilterType>;
   skills: Array<SkillType>;
-  projects: Array<ProjectType>;
+  projects: Array<ProjectItemType>;
   socialList: Array<SocialType>;
   headings: Record<string, HeadingType>;
   profile: ProfileType;
@@ -66,7 +69,7 @@ export type StoreType = {
 export const store: StoreType = {
   _state: {
     navLinks: ['home', 'skills', 'projects', 'contact'],
-    filters: ['mobileApp', 'webSite', 'landingPage'],
+    filters: ['all', 'mobileApp', 'webSite', 'landingPage'],
     socialList: [
       {
         id: randomId(),
@@ -129,6 +132,7 @@ export const store: StoreType = {
           'ES6',
           'Promise, Async/Await',
           'REST API',
+          'Graphql, Apollo',
           'SOLID',
           'OOP',
           'TDD',
@@ -167,7 +171,7 @@ export const store: StoreType = {
     projects: [
       {
         id: randomId(),
-        appType: 'mobileApp',
+        projectType: 'mobileApp',
         title: 'Social Network',
         description:
           'This application based on Create React App, Typescript and Redux. Developed with React Class' +
@@ -181,7 +185,7 @@ export const store: StoreType = {
       },
       {
         id: randomId(),
-        appType: 'mobileApp',
+        projectType: 'mobileApp',
         title: 'Todolist',
         description:
           'This application based on Create React App, Typescript and Redux. Developed with functional components and React hooks, React-Context, Redux-thunk, React Formic, Axios, REST API, ESLint Airbnb, Jest, Storybook.',
@@ -192,7 +196,57 @@ export const store: StoreType = {
       },
       {
         id: randomId(),
-        appType: 'mobileApp',
+        projectType: 'mobileApp',
+        title: 'Counter',
+        description:
+          'This application based on Create React App, Typescript and Redux (there is also a version with Mobx in another branch).  Developed with functional components and React hooks, React-router, web storage HTML5 API, Jest.',
+        link: {
+          demo: 'https://svensktutby.github.io/react-counter',
+          github: 'https://github.com/svensktutby/react-counter',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'mobileApp',
+        title: 'Trivia game',
+        description:
+          'This game application based on Create React App and Typescript. Developed with functional' +
+          ' components and React hooks (there are also some custom hooks), Fetch requests, REST API, ESLint Airbnb.',
+        link: {
+          demo: 'https://svensktutby-trivia-game.netlify.app',
+          github:
+            'https://github.com/svensktutby/make-20-react-apps/tree/master/07-trivia-game',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'mobileApp',
+        title: 'Infinite Image Gallery',
+        description:
+          'This application based on Create React App and Typescript. Developed with functional' +
+          ' components and React hooks, Fetch requests, REST API, ESLint Airbnb.',
+        link: {
+          demo: 'https://svensktutby-infinite-image-gallery.netlify.app',
+          github:
+            'https://github.com/svensktutby/make-20-react-apps/tree/master/06-infinite-image-gallery',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'mobileApp',
+        title: 'Paper Rock Scissors',
+        description:
+          'This game application based on Create React App and Typescript. Developed with functional' +
+          ' components and React hooks, ESLint Airbnb.',
+        link: {
+          demo: 'https://svensktutby-paper-rock-scissors.netlify.app/',
+          github:
+            'https://github.com/svensktutby/make-20-react-apps/tree/master/04-paper-rock-scissors',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'mobileApp',
         title: 'Movie Search',
         description:
           'This application was developed with Vanilla JS, semantic HTML5 tags, CSS3 transformations and animations,' +
@@ -204,7 +258,7 @@ export const store: StoreType = {
       },
       {
         id: randomId(),
-        appType: 'mobileApp',
+        projectType: 'mobileApp',
         title: 'English for kids',
         description:
           'This game application was developed with Vanilla JS, semantic HTML5 tags, CSS3 transformations and animations, media and web storage HTML5 API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
@@ -215,7 +269,30 @@ export const store: StoreType = {
       },
       {
         id: randomId(),
-        appType: 'landingPage',
+        projectType: 'mobileApp',
+        title: 'Virtual keyboard',
+        description:
+          'This application was developed with Vanilla JS, semantic HTML5 tags, CSS3 transformations and' +
+          ' animations. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
+        link: {
+          demo: 'https://svensktutby.github.io/virtual-keyboard',
+          github: 'https://github.com/svensktutby/virtual-keyboard',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'mobileApp',
+        title: 'Keksobooking',
+        description:
+          'This application was developed with Vanilla JS, semantic HTML5 tags, CSS3 transformations and animations. Were used XMLHttpRequest requests, HTTP, JSON, ESLint.',
+        link: {
+          demo: 'https://svensktutby.github.io/html-a-js-keksobooking',
+          github: 'https://github.com/svensktutby/html-a-js-keksobooking',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'landingPage',
         title: 'Singolo',
         description:
           'This landing page was developed with perfect pixel method, W3C validation, responsive and' +
@@ -228,7 +305,19 @@ export const store: StoreType = {
       },
       {
         id: randomId(),
-        appType: 'webSite',
+        projectType: 'landingPage',
+        title: 'Hipsweet',
+        description:
+          'This landing page was developed with perfect pixel method, W3C validation, semantic HTML5 tags, CSS3' +
+          ' transformations and animations, cross browser support. Were used Gulp, SCSS, Yandex maps API, jQuery libraries.',
+        link: {
+          demo: 'https://svensktutby.github.io/loftschool-hipsweet/dist',
+          github: 'https://github.com/svensktutby/loftschool-hipsweet',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'webSite',
         title: 'Mishka',
         description:
           'This web site was developed with perfect pixel method, W3C validation, responsive and flexible layout,' +
@@ -236,6 +325,30 @@ export const store: StoreType = {
         link: {
           demo: 'https://svensktutby.github.io/html-a-mishka/build',
           github: 'https://github.com/svensktutby/html-a-mishka',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'webSite',
+        title: 'Gllacy',
+        description:
+          'This web site was developed with perfect pixel method, W3C validation, semantic HTML5 tags,' +
+          ' CSS3 transformations and animations, cross browser support, Vanilla JS. Was used Google maps API.',
+        link: {
+          demo: 'https://svensktutby.github.io/html-a-gllacy',
+          github: 'https://github.com/svensktutby/html-a-gllacy',
+        },
+      },
+      {
+        id: randomId(),
+        projectType: 'webSite',
+        title: 'Nerds',
+        description:
+          'This web site was developed with perfect pixel method, W3C validation, semantic HTML5 tags,' +
+          ' CSS3 transformations and animations, cross browser support, Vanilla JS. Was used Google maps API.',
+        link: {
+          demo: 'https://svensktutby.github.io/html-a-nerds/',
+          github: 'https://github.com/svensktutby/html-a-nerds',
         },
       },
     ],

@@ -15,11 +15,16 @@
 .filter {
   position: relative;
 
+  padding: 0;
+
   font-weight: 700;
   font-size: $font-size-sm;
   color: $text-color;
   text-decoration: none;
   word-break: initial;
+  background-color: transparent;
+
+  border: 0;
 
   transition: color $transition-time;
 

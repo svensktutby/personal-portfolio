@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import s from './Main.module.scss';
 import styleContainer from '../common/styles/container.module.scss';
 import styleTitle from '../common/styles/title.module.scss';
+import styleTypewriter from '../common/styles/typewriter.module.scss';
 import myPhoto from '../../assets/images/my-photo.png';
 import { Mouse } from '../common/Mouse';
 import styleBtn from '../common/styles/button.module.scss';
@@ -26,7 +27,7 @@ export const Main: FC<PropsType> = ({ name, lastname, navLinks }) => {
               {name} <span>{lastname}</span>
             </h1>
 
-            <p className={`${s.headline} ${s.typewriter}`}>
+            <p className={`${s.headline} ${styleTypewriter.typewriter}`}>
               I'm a <span>Frontend Developer&nbsp;</span>
             </p>
 

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-scroll';
 
 import s from './Profile.module.scss';
-import myAvatar from '../../../assets/images/my-avatar.jpg';
+import myAvatar from '../../../assets/images/my-avatar.jpeg';
 
 type PropsType = {
   homeLink: string;
