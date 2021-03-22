@@ -295,8 +295,8 @@ export const store: StoreType = {
         projectType: 'landingPage',
         title: 'Singolo',
         description:
-          'This landing page was developed with perfect pixel method, W3C validation, responsive and' +
-          ' flexible layout, semantic HTML5 tags, CSS3 transformations and animations, cross browser support, Vanilla JS' +
+          'This landing page was developed with perfect pixel method, W3C validation, BEM, responsive and' +
+          ' flexible layout, semantic HTML5 tags, CSS3 transformations and animations, cross browser supporting, Vanilla JS' +
           ' touch slider and effects.',
         link: {
           demo: 'https://svensktutby.github.io/singolo',
@@ -308,8 +308,8 @@ export const store: StoreType = {
         projectType: 'landingPage',
         title: 'Hipsweet',
         description:
-          'This landing page was developed with perfect pixel method, W3C validation, semantic HTML5 tags, CSS3' +
-          ' transformations and animations, cross browser support. Were used Gulp, SCSS, Yandex maps API, jQuery libraries.',
+          'This landing page was developed with perfect pixel method, W3C validation, BEM, semantic HTML5 tags, CSS3' +
+          ' transformations and animations, cross browser supporting. Were used Gulp, SCSS, Yandex maps API, jQuery libraries.',
         link: {
           demo: 'https://svensktutby.github.io/loftschool-hipsweet/dist',
           github: 'https://github.com/svensktutby/loftschool-hipsweet',
@@ -320,8 +320,9 @@ export const store: StoreType = {
         projectType: 'webSite',
         title: 'Mishka',
         description:
-          'This web site was developed with perfect pixel method, W3C validation, responsive and flexible layout,' +
-          ' semantic HTML5 tags, CSS3 transformations and animations, cross browser support. Were used Gulp, SCSS, Stylelint.',
+          'This web site was developed with perfect pixel method, W3C validation, BEM, responsive and flexible layout,' +
+          ' semantic HTML5 tags, CSS3 transformations and animations, cross browser supporting, Vanilla JS. Were used Gulp,' +
+          ' SCSS, Yandex maps API, Stylelint.',
         link: {
           demo: 'https://svensktutby.github.io/html-a-mishka/build',
           github: 'https://github.com/svensktutby/html-a-mishka',
@@ -332,8 +333,8 @@ export const store: StoreType = {
         projectType: 'webSite',
         title: 'Gllacy',
         description:
-          'This web site was developed with perfect pixel method, W3C validation, semantic HTML5 tags,' +
-          ' CSS3 transformations and animations, cross browser support, Vanilla JS. Was used Google maps API.',
+          'This web site was developed with perfect pixel method, W3C validation, BEM, semantic HTML5 tags,' +
+          ' CSS3 transformations and animations, cross browser supporting, Vanilla JS. Was used Google maps API.',
         link: {
           demo: 'https://svensktutby.github.io/html-a-gllacy',
           github: 'https://github.com/svensktutby/html-a-gllacy',
@@ -344,8 +345,8 @@ export const store: StoreType = {
         projectType: 'webSite',
         title: 'Nerds',
         description:
-          'This web site was developed with perfect pixel method, W3C validation, semantic HTML5 tags,' +
-          ' CSS3 transformations and animations, cross browser support, Vanilla JS. Was used Google maps API.',
+          'This web site was developed with perfect pixel method, W3C validation, BEM, semantic HTML5 tags,' +
+          ' CSS3 transformations and animations, cross browser supporting, Vanilla JS. Was used Google maps API.',
         link: {
           demo: 'https://svensktutby.github.io/html-a-nerds/',
           github: 'https://github.com/svensktutby/html-a-nerds',

@@ -21,7 +21,7 @@
     bottom: 0;
     left: 0;
 
-    background-color: $overlay;
+    background-color: rgba(0, 0, 0, 0.4);;
   }
 
   @media screen and (max-width: $screen-md) {
@@ -33,10 +33,6 @@
 .container {
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: $screen-md) {
-    padding-top: 140px;
-  }
 }
 
 .content {
@@ -84,7 +80,7 @@
   @media screen and (max-width: $screen-sm) {
     @include font-size(48px);
 
-    margin-bottom: px-rem(20px);
+    margin-bottom: 50px;
   }
 }
 
@@ -103,9 +99,13 @@
   }
 
   @media screen and (max-width: $screen-sm) {
-    @include font-size(26px);
+    @include font-size(24px);
 
-    margin-bottom: px-rem(20px);
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: $screen-xs) {
+    @include font-size(22px);
   }
 }
 

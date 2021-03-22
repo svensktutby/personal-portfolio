@@ -7,9 +7,10 @@ import styleLink from '../../common/styles/link.module.scss';
 type PropsType = {
   links: Array<string>;
   active: boolean;
+  closeHandler: () => void;
 };
 
-export const LinkList: FC<PropsType> = ({ links, active }) => {
+export const LinkList: FC<PropsType> = ({ links, active, closeHandler }) => {
   const listClassName = `${s.list} ${active ? s.active : ''}`;
 
   return (
@@ -24,6 +25,7 @@ export const LinkList: FC<PropsType> = ({ links, active }) => {
               duration={500}
               activeClass={s.active}
               spy={true}
+              onClick={closeHandler}
             >
               {link}
             </Link>

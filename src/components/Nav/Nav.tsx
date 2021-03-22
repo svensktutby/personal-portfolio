@@ -40,10 +40,18 @@ export const Nav: FC<PropsType> = ({
 
         {menuActive ? (
           <Overlay closeHandler={closeHandler}>
-            <LinkList links={navLinks} active={menuActive} />
+            <LinkList
+              links={navLinks}
+              active={menuActive}
+              closeHandler={closeHandler}
+            />
           </Overlay>
         ) : (
-          <LinkList links={navLinks} active={menuActive} />
+          <LinkList
+            links={navLinks}
+            active={menuActive}
+            closeHandler={closeHandler}
+          />
         )}
       </div>
     </nav>
