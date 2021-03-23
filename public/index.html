@@ -11,7 +11,21 @@
   />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
-  <title>Andrei Shved's CV</title>
+  <title>Andrei Shved's portfolio</title>
+  <script>
+    function correctVhMobile() {
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    correctVhMobile();
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      correctVhMobile();
+    });
+  </script>
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
