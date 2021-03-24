@@ -56,9 +56,36 @@
 }
 
 .info {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
   padding: 20px;
+}
+
+.content {
+  margin-bottom: 20px;
 }
 
 .description {
   font-size: $font-size-sm;
+}
+
+.projectType {
+  margin-top: auto;
+}
+
+.projectTypeLink {
+  font-size: $font-size;
+  color: $link-color-hover;
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      color: darken($link-color-hover, 20%);
+    }
+
+    &:active {
+      color: $link-color-active;
+    }
+  }
 }

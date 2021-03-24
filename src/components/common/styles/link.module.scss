@@ -4,6 +4,9 @@
   color: $link-color;
   text-decoration: none;
 
+  background-color: transparent;
+  border: 0;
+
   transition: color $transition-time;
 
   &:focus {

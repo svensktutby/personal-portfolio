@@ -79,10 +79,9 @@ export const Projects: FC<PropsType> = ({ projects, heading, filters }) => {
             return (
               <Project
                 key={project.id}
-                title={project.title}
-                description={project.description}
                 image={image}
-                link={project.link}
+                project={project}
+                setProjectType={setFilter}
               />
             );
           })}

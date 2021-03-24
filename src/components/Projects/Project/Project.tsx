@@ -2,19 +2,27 @@ import React, { FC } from 'react';
 
 import s from './Project.module.scss';
 import styleBtn from '../../common/styles/button.module.scss';
+import styleLink from '../../common/styles/link.module.scss';
 import styleTitle from '../../common/styles/title.module.scss';
 import styleCard from '../../common/styles/card.module.scss';
 import defaultImage from '../../../assets/images/no-image.svg';
-import { LinkType } from '../../../bll/store';
+import { FilterType, ProjectItemType } from '../../../bll/store';
+import {
+  capitalizeFirstLetter,
+  unCamelCase,
+} from '../../../utils/textTransform';
 
 type PropsType = {
-  title: string;
-  description: string;
   image: string;
-  link: LinkType;
+  project: ProjectItemType;
+  setProjectType: (type: FilterType) => void;
 };
 
-export const Project: FC<PropsType> = ({ title, description, image, link }) => {
+export const Project: FC<PropsType> = ({
+  image,
+  setProjectType,
+  project: { title, description, link, projectType },
+}) => {
   return (
     <div>
       <div className={`${styleCard.card} ${s.projectCard}`}>
@@ -40,10 +48,23 @@ export const Project: FC<PropsType> = ({ title, description, image, link }) => {
           </div>
         </div>
         <div className={s.info}>
-          <h3 className={`${styleTitle.titleQuaternary} ${s.title}`}>
-            {title}
-          </h3>
-          <div className={s.description}>{description}</div>
+          <div className={s.content}>
+            <h3 className={`${styleTitle.titleQuaternary} ${s.title}`}>
+              {title}
+            </h3>
+            <div className={s.description}>{description}</div>
+          </div>
+
+          <div className={s.projectType}>
+            <span>Project type: </span>
+            <button
+              className={`${styleLink.link} ${s.projectTypeLink}`}
+              type="button"
+              onClick={() => setProjectType(projectType)}
+            >
+              {`${capitalizeFirstLetter(unCamelCase(projectType))}`}
+            </button>
+          </div>
         </div>
       </div>
     </div>
