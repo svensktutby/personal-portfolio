@@ -23,7 +23,13 @@ export const Profile: FC<PropsType> = ({
 
   return (
     <div className={s.profile}>
-      <Link className={s.link} to={homeLink} smooth={true} duration={500}>
+      <Link
+        className={s.link}
+        to={homeLink}
+        smooth={true}
+        duration={500}
+        tabIndex={0}
+      >
         <img className={s.avatar} src={myAvatar} alt="Avatar" />
       </Link>
       <span className={s.name}>

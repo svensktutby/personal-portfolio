@@ -26,6 +26,7 @@ export const LinkList: FC<PropsType> = ({ links, active, closeHandler }) => {
               activeClass={s.active}
               spy={true}
               onClick={closeHandler}
+              tabIndex={0}
             >
               {link}
             </Link>

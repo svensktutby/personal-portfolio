@@ -188,7 +188,10 @@ export const store: StoreType = {
         projectType: 'mobileApp',
         title: 'Todolist',
         description:
-          'This application based on Create React App, Typescript and Redux. Developed with functional components and React hooks, React-Context, Redux-thunk, React Formic, Axios, REST API, ESLint Airbnb, Jest, Storybook.',
+          'This application based on Create React App, Typescript and Redux. Developed with functional components' +
+          ' and React hooks, React-Context, Redux-thunk, React Formic, Axios, REST API, ESLint Airbnb, Jest,' +
+          ' Material UI,' +
+          ' Storybook.',
         link: {
           demo: 'https://svensktutby.github.io/todolist',
           github: 'https://github.com/svensktutby/todolist',

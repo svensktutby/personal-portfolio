@@ -9,6 +9,19 @@
 
 .link {
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      & .avatar {
+        border-color: $white;
+      }
+    }
+  }
 }
 
 .avatar {
@@ -16,8 +29,12 @@
   height: 110px;
   margin-bottom: 16px;
 
-  border: 5px solid $gray-darken;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $gray-darken;
   border-radius: 50%;
+
+  transition: border-color $transition-time;
 }
 
 .name {

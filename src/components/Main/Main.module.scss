@@ -172,4 +172,12 @@
   padding: 16px;
 
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+    // Mouse shape
+    & div div {
+      box-shadow: 0 5px 20px $white;
+    }
+  }
 }

@@ -24,6 +24,7 @@ export const Hire: FC<PropsType> = ({ heading, contactLink }) => {
             to={contactLink}
             smooth={true}
             duration={500}
+            tabIndex={0}
           >
             Hire me
           </Link>

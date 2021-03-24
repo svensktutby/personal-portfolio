@@ -40,6 +40,7 @@ export const Main: FC<PropsType> = ({ name, lastname, navLinks }) => {
                 to={projectsLink}
                 smooth={true}
                 duration={500}
+                tabIndex={0}
               >
                 My work
               </Link>
@@ -52,7 +53,13 @@ export const Main: FC<PropsType> = ({ name, lastname, navLinks }) => {
         </div>
 
         <div className={s.mouseWrapper}>
-          <Link className={s.link} to={skillsLink} smooth={true} duration={500}>
+          <Link
+            className={s.link}
+            to={skillsLink}
+            smooth={true}
+            duration={500}
+            tabIndex={0}
+          >
             <Mouse />
           </Link>
         </div>
