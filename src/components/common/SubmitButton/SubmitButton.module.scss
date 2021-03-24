@@ -1,0 +1,211 @@
+@import "src/components/common/styles/base/variables";
+$button-width: 160px;
+$button-height: 43px;
+$padding: 10px 30px;
+$border-radius: 30px;
+$spinner-width: $button-width/6;
+$btn-bg: $theme-color;
+$text-light: $white;
+$tr-t: $transition-time;
+$tr-t-min: 0.05s;
+
+.btn {
+  position: relative;
+
+  display: inline-block;
+  width: $button-width;
+  height: $button-height;
+  padding: $padding;
+
+  font-size: $font-size-sm;
+  line-height: $line-height;
+  text-align: center;
+  color: $text-light;
+
+  background-color: $btn-bg;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $btn-bg;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  transition: background-color $tr-t, color $tr-t, border-radius $tr-t, width $tr-t, height $tr-t;
+
+  appearance: none;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: $shadow;
+  }
+
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      color: $theme-color;
+
+      background-color: $white;
+    }
+  }
+
+  &.default {
+    & span {
+      display: inline-block;
+
+      animation: scale 1s;
+    }
+  }
+
+  &.fetching {
+    width: $button-width/2.2;
+    min-width: 0;
+    height: $button-width/2.2;
+
+    color: transparent;
+
+    border-radius: 50%;
+
+    transition: background-color $tr-t-min, color $tr-t-min, border-radius $tr-t, width $tr-t, height $tr-t;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: $spinner-width;
+      height: $spinner-width;
+
+      border: 4px solid $text-light;
+      border-left-color: transparent;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      transition-timing-function: ease-in-out;
+      animation: spin linear 1s forwards infinite;
+    }
+
+    &.success {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: $spinner-width;
+        height: $spinner-width/2;
+
+        border: 4px solid $text-light;
+        border-top: 0;
+        border-right: 0;
+        transform: translate(-50%, -50%) rotate(0deg) scale(0);
+
+        animation: success ease-in 0.15s forwards;
+        animation-delay: 0.5s;
+      }
+    }
+
+    &.error {
+      position: relative;
+
+      animation: vibrate ease-in 0.5s forwards;
+      animation-delay: 0.5s;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        content: "!";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-align: center;
+        color: $text-light;
+
+        transform: translate(-50%, -50%) scale(0);
+
+        animation: error ease-in 0.5s forwards;
+        animation-delay: 0.5s;
+      }
+    }
+  }
+
+  & span {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes success {
+  from {
+    transform: translate(-50%, -50%) rotate(0) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  }
+}
+
+@keyframes error {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    background-color: $color-danger;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes vibrate {
+  0%,
+  30%,
+  60%,
+  85%,
+  100% {
+    left: 0;
+
+    background-color: $color-danger;
+  }
+  10%,
+  40%,
+  90%,
+  70% {
+    left: -2px;
+
+    background-color: $color-danger;
+  }
+  20%,
+  50%,
+  80%,
+  95% {
+    left: 2px;
+
+    background-color: $color-danger;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -45,18 +45,10 @@
   resize: none;
 }
 
-.sendingText {
-  animation: blink 1s ease infinite;
-}
-
-@keyframes blink {
-  0% {
-    color: rgba($white, 1);
-  }
-  50% {
-    color: rgba($white, 0.5);
-  }
-  100% {
-    color: rgba($white, 1);
-  }
+.submitWrapper {
+  min-height: 75px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

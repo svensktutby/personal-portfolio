@@ -175,9 +175,15 @@
 
   &:focus {
     outline: none;
-    // Mouse shape
-    & div div {
-      box-shadow: 0 5px 20px $white;
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      // Mouse shape
+      & div div {
+        box-shadow: 0 5px 20px $white;
+      }
     }
   }
 }

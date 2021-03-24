@@ -1,12 +1,14 @@
 import React, { BaseSyntheticEvent, FC, useState } from 'react';
 
 import s from './Form.module.scss';
-import styleBtn from '../../common/styles/button.module.scss';
 import styleInput from '../../common/styles/input.module.scss';
+import { SubmitButton } from '../../common/SubmitButton';
 import { api } from '../../../api';
 
 export const Form: FC = () => {
   const [fetchRequest, setFetchRequest] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const { sendEmail } = api;
 
@@ -14,16 +16,26 @@ export const Form: FC = () => {
     e.preventDefault();
     setFetchRequest(true);
 
+    const finallyCallback = (delay: number = 6000) => {
+      setTimeout(() => {
+        setFetchRequest(false);
+        setSuccess(false);
+        setError(false);
+      }, delay);
+    };
+
     sendEmail(e)
       .then((result) => {
         e.target.reset();
+        setSuccess(true);
         console.log(result.text);
       })
       .catch((error) => {
+        setError(true);
         console.log(error.text);
       })
       .finally(() => {
-        setFetchRequest(false);
+        finallyCallback();
       });
   };
 
@@ -64,17 +76,15 @@ export const Form: FC = () => {
         />
       </label>
       <div className={s.submitWrapper}>
-        <button
-          className={`${styleBtn.btn}`}
+        <SubmitButton
           type="submit"
           disabled={fetchRequest}
+          fetching={fetchRequest}
+          error={error}
+          success={success}
         >
-          {fetchRequest ? (
-            <span className={s.sendingText}>Sending...</span>
-          ) : (
-            <>Send message</>
-          )}
-        </button>
+          <span>Send message</span>
+        </SubmitButton>
       </div>
     </form>
   );
