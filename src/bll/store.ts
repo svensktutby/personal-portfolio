@@ -256,7 +256,7 @@ export const store: StoreType = {
           ' Swiper library, REST API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
         link: {
           demo: 'https://svensktutby-movie-search.netlify.app',
-          github: 'https://github.com/svensktutby/',
+          github: 'https://github.com/svensktutby/movie-search',
         },
       },
       {
@@ -267,7 +267,7 @@ export const store: StoreType = {
           'This game application was developed with Vanilla JS, semantic HTML5 tags, CSS3 transformations and animations, media and web storage HTML5 API. Were used Webpack, Pug, SCSS, ESLint Airbnb.',
         link: {
           demo: 'https://svensktutby-english-for-kids.netlify.app',
-          github: 'https://github.com/svensktutby/',
+          github: 'https://github.com/svensktutby/english-for-kids',
         },
       },
       {
