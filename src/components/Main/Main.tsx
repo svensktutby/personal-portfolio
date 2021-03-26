@@ -4,10 +4,11 @@ import { Link } from 'react-scroll';
 import s from './Main.module.scss';
 import styleContainer from '../common/styles/container.module.scss';
 import styleTitle from '../common/styles/title.module.scss';
+import styleBtn from '../common/styles/button.module.scss';
 import styleTypewriter from '../common/styles/typewriter.module.scss';
 import myPhoto from '../../assets/images/my-photo.png';
+import CV from '../../assets/cv/AndreiShvedCV.pdf';
 import { Mouse } from '../common/Mouse';
-import styleBtn from '../common/styles/button.module.scss';
 
 type PropsType = {
   name: string;
@@ -32,7 +33,11 @@ export const Main: FC<PropsType> = ({ name, lastname, navLinks }) => {
             </p>
 
             <div className={s.btnWrapper}>
-              <a className={styleBtn.btn} href="/#">
+              <a
+                className={styleBtn.btn}
+                href={CV}
+                download="Andrei Shved's resume"
+              >
                 Download CV
               </a>
               <Link

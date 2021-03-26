@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/svensktutby/personal-portfolio.git"
   },
-  "homepage": "https://svensktutby.github.io/personal-portfolio/",
+  "homepage": "https://svensktutby.github.io/personal-portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -25,7 +25,7 @@
     "@types/react-dom": "17.0.0",
     "@types/react-scroll": "^1.8.2",
     "emailjs-com": "^2.6.4",
-    "node-sass": "4.14.1",
+    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",

@@ -132,7 +132,7 @@ export const store: StoreType = {
           'ES6',
           'Promise, Async/Await',
           'REST API',
-          'Graphql, Apollo',
+          'GraphQL, Apollo',
           'SOLID',
           'OOP',
           'TDD',
@@ -202,7 +202,7 @@ export const store: StoreType = {
         projectType: 'mobileApp',
         title: 'Counter',
         description:
-          'This application based on Create React App, Typescript and Redux (there is also a version with Mobx in another branch).  Developed with functional components and React hooks, React-router, web storage HTML5 API, Jest.',
+          'This application based on Create React App, Typescript and Redux (there is also a version with MobX in another branch).  Developed with functional components and React hooks, React-router, web storage HTML5 API, Jest.',
         link: {
           demo: 'https://svensktutby.github.io/react-counter',
           github: 'https://github.com/svensktutby/react-counter',
