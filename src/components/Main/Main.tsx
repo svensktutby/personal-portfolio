@@ -6,7 +6,6 @@ import styleContainer from '../common/styles/container.module.scss';
 import styleTitle from '../common/styles/title.module.scss';
 import styleBtn from '../common/styles/button.module.scss';
 import styleTypewriter from '../common/styles/typewriter.module.scss';
-import myPhoto from '../../assets/images/my-photo.png';
 import CV from '../../assets/cv/AndreiShvedCV.pdf';
 import { Mouse } from '../common/Mouse';
 
@@ -51,10 +50,6 @@ export const Main: FC<PropsType> = ({ name, lastname, navLinks }) => {
               </Link>
             </div>
           </div>
-        </div>
-
-        <div className={s.photo}>
-          <img className={s.image} src={myPhoto} alt={`${name} ${lastname}`} />
         </div>
 
         <div className={s.mouseWrapper}>

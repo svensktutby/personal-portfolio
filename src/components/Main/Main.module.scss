@@ -32,28 +32,17 @@
 
 .container {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .content {
   position: relative;
   z-index: 3;
-
-  @media screen and (max-width: $screen-xl) {
-    padding-top: 8rem;
-  }
-
-  @media screen and (max-width: $screen-md) {
-    padding-top: 0;
-  }
 }
 
 .intro {
   text-align: center;
-
-  @media screen and (max-width: $screen-md) {
-    text-align: initial;
-  }
 }
 
 .intro .title,
@@ -80,7 +69,12 @@
   @media screen and (max-width: $screen-sm) {
     @include font-size(48px);
 
-    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  @media screen and (max-width: $screen-md) and (orientation: landscape) {
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -124,31 +118,6 @@
 
   @media screen and (max-width: $screen-sm) {
     margin-left: 6px;
-  }
-}
-
-.photo {
-  position: absolute;
-  z-index: 2;
-  right: 20vh;
-  bottom: -5px;
-
-  width: 50vh;
-
-  @media screen and (max-width: $screen-xxl) {
-    right: 10vh;
-  }
-
-  @media screen and (max-width: $screen-lg) {
-    right: 4vh;
-  }
-
-  @media screen and (max-width: $screen-md) {
-    top: calc(#{$header-height} + 2%);
-    right: 0.5vh;
-    bottom: initial;
-
-    width: 80%;
   }
 }
 
