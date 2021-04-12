@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.ae60a638.chunk.css",
-    "main.js": "/personal-portfolio/static/js/main.f2da5ae4.chunk.js",
-    "main.js.map": "/personal-portfolio/static/js/main.f2da5ae4.chunk.js.map",
+    "main.js": "/personal-portfolio/static/js/main.0d5f89fa.chunk.js",
+    "main.js.map": "/personal-portfolio/static/js/main.0d5f89fa.chunk.js.map",
     "runtime-main.js": "/personal-portfolio/static/js/runtime-main.565bea99.js",
     "runtime-main.js.map": "/personal-portfolio/static/js/runtime-main.565bea99.js.map",
     "static/js/2.8d04d051.chunk.js": "/personal-portfolio/static/js/2.8d04d051.chunk.js",
@@ -12,7 +12,7 @@
     "index.html": "/personal-portfolio/index.html",
     "static/css/main.ae60a638.chunk.css.map": "/personal-portfolio/static/css/main.ae60a638.chunk.css.map",
     "static/js/2.8d04d051.chunk.js.LICENSE.txt": "/personal-portfolio/static/js/2.8d04d051.chunk.js.LICENSE.txt",
-    "static/media/AndreiShvedCV.b8f9d893.pdf": "/personal-portfolio/static/media/AndreiShvedCV.b8f9d893.pdf",
+    "static/media/AndreiShvedCV.4f747071.pdf": "/personal-portfolio/static/media/AndreiShvedCV.4f747071.pdf",
     "static/media/Hire.module.scss": "/personal-portfolio/static/media/bg-hire.2aa679ae.jpeg",
     "static/media/Main.module.scss": "/personal-portfolio/static/media/bg-main.d96877f7.jpeg",
     "static/media/counter.f2159db4.png": "/personal-portfolio/static/media/counter.f2159db4.png",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.565bea99.js",
     "static/js/2.8d04d051.chunk.js",
     "static/css/main.ae60a638.chunk.css",
-    "static/js/main.f2da5ae4.chunk.js"
+    "static/js/main.0d5f89fa.chunk.js"
   ]
 }
